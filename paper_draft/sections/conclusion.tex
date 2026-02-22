@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We conducted the first systematic layer-wise probing study of epistemic versus non-epistemic belief encoding in \llms. Using mass-mean probing on residual stream activations from four GPT-2 models (117M--1.5B parameters), we showed that: (1) all models achieve near-perfect accuracy (99.2--100\%) at distinguishing factual claims from opinion statements, with high selectivity confirming genuine encoding; (2) non-epistemic agreement is more linearly decodable (87--95\%) than epistemic truth across mixed domains (54--59\%); and (3) belief encoding follows consistent layer-wise patterns that shift systematically with model scale.
+
+Our key takeaway is that \llms develop distinct representational subspaces for different belief types, but encode \emph{how} beliefs are expressed more robustly than \emph{whether} they are true. This finding has direct implications for hallucination detection, where distinguishing belief types could enable more targeted interventions.
+
+Future work should validate these findings on larger, instruction-tuned models (\eg LLaMA, Mistral), use naturally occurring opinion datasets to reduce curation bias, and employ causal intervention experiments to test whether the identified representational directions play a functional role in model behavior. Extending this analysis to non-English languages and to the training dynamics of belief representations (using model checkpoints from Pythia) are promising directions for deepening our understanding of how \llms represent the distinction between knowledge and opinion.

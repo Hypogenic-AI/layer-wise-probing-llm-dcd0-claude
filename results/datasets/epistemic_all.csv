@@ -1,0 +1,1001 @@
+statement,label,source,belief_type
+The city of Dombivli is in India.,1,cities,epistemic
+The city of Nizhniy Novgorod is in Russia.,1,cities,epistemic
+The city of Dakar is in India.,0,cities,epistemic
+The city of Mbuji-Mayi is in the Democratic Republic of the Congo.,1,cities,epistemic
+The city of Heze is in Yemen.,0,cities,epistemic
+The city of Rio de Janeiro is in Brazil.,1,cities,epistemic
+The city of Bengbu is in China.,1,cities,epistemic
+The city of Minsk is in South Korea.,0,cities,epistemic
+The city of Bucharest is in Romania.,1,cities,epistemic
+The city of Ciudad Juarez is in Mexico.,1,cities,epistemic
+The city of Zhangzhou is in China.,1,cities,epistemic
+The city of Beirut is in Algeria.,0,cities,epistemic
+The city of Luohe is in China.,1,cities,epistemic
+The city of Tangier is in Morocco.,1,cities,epistemic
+The city of Zhabei is in China.,1,cities,epistemic
+The city of Rizhao is in Iraq.,0,cities,epistemic
+The city of Homs is in Syria.,1,cities,epistemic
+The city of Kirkuk is in China.,0,cities,epistemic
+The city of Shanghai is in China.,1,cities,epistemic
+The city of Rohini is in Russia.,0,cities,epistemic
+The city of Penza is in Russia.,1,cities,epistemic
+The city of Reynosa is in China.,0,cities,epistemic
+The city of N'Djamena is in Chad.,1,cities,epistemic
+The city of Omdurman is in Sudan.,1,cities,epistemic
+The city of Weihai is in Russia.,0,cities,epistemic
+The city of Qionghai is in Ecuador.,0,cities,epistemic
+The city of Ipoh is in Malaysia.,1,cities,epistemic
+The city of Copenhagen is in Denmark.,1,cities,epistemic
+The city of Chattogram is in Bangladesh.,1,cities,epistemic
+The city of Feira de Santana is in Brazil.,1,cities,epistemic
+The city of Sevastopol is in Pakistan.,0,cities,epistemic
+The city of Daejeon is in India.,0,cities,epistemic
+The city of Madurai is in Burundi.,0,cities,epistemic
+The city of Herat is in China.,0,cities,epistemic
+The city of Koeln is in Nigeria.,0,cities,epistemic
+The city of Chiclayo is in Peru.,1,cities,epistemic
+The city of Tianshui is in China.,1,cities,epistemic
+The city of New South Memphis is in China.,0,cities,epistemic
+The city of Hamadan is in Pakistan.,0,cities,epistemic
+The city of Guilin is in China.,1,cities,epistemic
+The city of Malang is in Indonesia.,1,cities,epistemic
+The city of Budapest is in Iraq.,0,cities,epistemic
+The city of Foshan is in Mozambique.,0,cities,epistemic
+The city of Navi Mumbai is in India.,1,cities,epistemic
+The city of Jaipur is in India.,1,cities,epistemic
+The city of Mississauga is in Canada.,1,cities,epistemic
+The city of Luancheng is in China.,1,cities,epistemic
+The city of Kimhae is in Senegal.,0,cities,epistemic
+The city of Zahedan is in Iran.,1,cities,epistemic
+The city of Thuan An is in Mozambique.,0,cities,epistemic
+The city of Hamamatsu is in Russia.,0,cities,epistemic
+The city of General Santos is in China.,0,cities,epistemic
+The city of Shantou is in China.,1,cities,epistemic
+The city of Indianapolis is in Côte d'Ivoire.,0,cities,epistemic
+The city of Chizhou is in China.,1,cities,epistemic
+The city of Zaozhuang is in Belarus.,0,cities,epistemic
+The city of Ajmer is in Russia.,0,cities,epistemic
+The city of Jos is in Nigeria.,1,cities,epistemic
+The city of Kampung Baru Subang is in the Philippines.,0,cities,epistemic
+The city of Abeokuta is in Mozambique.,0,cities,epistemic
+The city of Astrakhan is in Russia.,1,cities,epistemic
+The city of Pingliang is in Tanzania.,0,cities,epistemic
+The city of Nagoya is in China.,0,cities,epistemic
+The city of Najafgarh is in Brazil.,0,cities,epistemic
+The city of Lusaka is in Poland.,0,cities,epistemic
+The city of Pune is in South Korea.,0,cities,epistemic
+The city of Xuchang is in Japan.,0,cities,epistemic
+The city of Chuzhou is in China.,1,cities,epistemic
+The city of Bokaro is in India.,1,cities,epistemic
+The city of Buraydah is in Saudi Arabia.,1,cities,epistemic
+The city of Quebec is in Canada.,1,cities,epistemic
+The city of Ludhiana is in India.,1,cities,epistemic
+The city of Zhoushan is in the Philippines.,0,cities,epistemic
+The city of Goeteborg is in Sweden.,1,cities,epistemic
+The city of Laiwu is in the United States.,0,cities,epistemic
+The city of Zhangye is in China.,1,cities,epistemic
+The city of Changde is in China.,1,cities,epistemic
+The city of Durban is in Ukraine.,0,cities,epistemic
+The city of Wanning is in China.,1,cities,epistemic
+The city of Omsk is in China.,0,cities,epistemic
+The city of Gwalior is in China.,0,cities,epistemic
+The city of Panshan is in Japan.,0,cities,epistemic
+The city of Kinshasa is in Brazil.,0,cities,epistemic
+The city of Zhangjiagang is in China.,1,cities,epistemic
+The city of Aparecida de Goiania is in China.,0,cities,epistemic
+The city of Solapur is in the United States.,0,cities,epistemic
+The city of Antananarivo is in Germany.,0,cities,epistemic
+The city of Yibin is in China.,1,cities,epistemic
+The city of Nagoya is in Japan.,1,cities,epistemic
+The city of San Pedro Sula is in Honduras.,1,cities,epistemic
+The city of Guang'an is in China.,1,cities,epistemic
+The city of Weihai is in China.,1,cities,epistemic
+The city of Denpasar is in Brazil.,0,cities,epistemic
+The city of Kotli is in the United States.,0,cities,epistemic
+The city of Kampala is in Uganda.,1,cities,epistemic
+The city of Bangkok is in China.,0,cities,epistemic
+The city of Balikpapan is in Indonesia.,1,cities,epistemic
+The city of Seongnam-si is in Russia.,0,cities,epistemic
+The city of Bloemfontein is in China.,0,cities,epistemic
+The city of Laibin is in Ethiopia.,0,cities,epistemic
+The city of Shaoxing is in the Philippines.,0,cities,epistemic
+The city of Pontianak is in Indonesia.,1,cities,epistemic
+The city of Bikaner is in South Korea.,0,cities,epistemic
+The city of Meizhou is in China.,1,cities,epistemic
+The city of Seattle is in the United States.,1,cities,epistemic
+The city of Nowrangapur is in India.,1,cities,epistemic
+The city of Makati City is in India.,0,cities,epistemic
+The city of Ciudad Nezahualcoyotl is in Mexico.,1,cities,epistemic
+The city of Huaihua is in South Africa.,0,cities,epistemic
+The city of Sao Paulo is in Brazil.,1,cities,epistemic
+The city of Kampala is in Turkey.,0,cities,epistemic
+The city of Zhumadian is in Brazil.,0,cities,epistemic
+The city of Malatya is in Russia.,0,cities,epistemic
+The city of Hengyang is in China.,1,cities,epistemic
+The city of Matsuyama is in Japan.,1,cities,epistemic
+The city of Bouake is in China.,0,cities,epistemic
+The city of Caloocan City is in the Philippines.,1,cities,epistemic
+The city of Maoming is in China.,1,cities,epistemic
+The city of Linyi is in Iraq.,0,cities,epistemic
+The city of Karbala is in Turkey.,0,cities,epistemic
+The city of Taiz is in Yemen.,1,cities,epistemic
+The city of Karol Bagh is in Syria.,0,cities,epistemic
+The city of Comilla is in Bangladesh.,1,cities,epistemic
+The city of Jamshedpur is in China.,0,cities,epistemic
+The city of Basrah is in China.,0,cities,epistemic
+The city of Kyoto is in China.,0,cities,epistemic
+The city of Theni is in India.,1,cities,epistemic
+The city of Quezon City is in China.,0,cities,epistemic
+The city of Ipoh is in Brazil.,0,cities,epistemic
+The city of Santiago de los Caballeros is in India.,0,cities,epistemic
+The city of Yiwu is in India.,0,cities,epistemic
+The city of Chaozhou is in China.,1,cities,epistemic
+The city of Isfahan is in Iran.,1,cities,epistemic
+The city of Sapporo is in Japan.,1,cities,epistemic
+The city of Baise is in Japan.,0,cities,epistemic
+The city of Yongzhou is in Ukraine.,0,cities,epistemic
+The city of Albuquerque is in the United States.,1,cities,epistemic
+The city of Ilorin is in Nigeria.,1,cities,epistemic
+The city of Fes is in Mali.,0,cities,epistemic
+The city of Ranchi is in Venezuela.,0,cities,epistemic
+The city of Coyoacan is in Mexico.,1,cities,epistemic
+The city of Rizhao is in China.,1,cities,epistemic
+The city of Ufa is in Russia.,1,cities,epistemic
+The city of Bursa is in Bosnia and Herzegovina.,0,cities,epistemic
+The city of Zhaotong is in China.,1,cities,epistemic
+The city of Oyo is in Nigeria.,1,cities,epistemic
+The city of Leipzig is in Russia.,0,cities,epistemic
+The city of Yaounde is in China.,0,cities,epistemic
+The city of Budapest is in Hungary.,1,cities,epistemic
+The city of Thuan An is in Vietnam.,1,cities,epistemic
+The city of Nay Pyi Taw is in Mozambique.,0,cities,epistemic
+The city of Wenzhou is in Moldova.,0,cities,epistemic
+The city of Rostov-na-Donu is in the United Arab Emirates.,0,cities,epistemic
+The city of Surat is in India.,1,cities,epistemic
+The city of Suizhou is in Japan.,0,cities,epistemic
+The city of Port-au-Prince is in South Korea.,0,cities,epistemic
+The city of Amman is in Malaysia.,0,cities,epistemic
+The city of Tangerang is in China.,0,cities,epistemic
+The city of Tiruchirappalli is in Iraq.,0,cities,epistemic
+The city of Xianning is in China.,1,cities,epistemic
+The city of Sarajevo is in Bosnia and Herzegovina.,1,cities,epistemic
+The city of Cucuta is in Colombia.,1,cities,epistemic
+The city of Suizhou is in China.,1,cities,epistemic
+The city of Santiago de Queretaro is in Ecuador.,0,cities,epistemic
+The city of Konya is in Russia.,0,cities,epistemic
+The city of Penza is in China.,0,cities,epistemic
+The city of Hebi is in China.,1,cities,epistemic
+The city of Johannesburg is in China.,0,cities,epistemic
+The city of Ahmedabad is in China.,0,cities,epistemic
+The city of Ahmedabad is in India.,1,cities,epistemic
+The city of Teresina is in Vietnam.,0,cities,epistemic
+The city of Kunming is in China.,1,cities,epistemic
+The city of Bloemfontein is in South Africa.,1,cities,epistemic
+The city of Incheon is in South Korea.,1,cities,epistemic
+The city of Dammam is in Russia.,0,cities,epistemic
+The city of Maceio is in Brazil.,1,cities,epistemic
+The city of Shenzhen is in China.,1,cities,epistemic
+The city of Coyoacan is in Kenya.,0,cities,epistemic
+The city of Prayagraj is in India.,1,cities,epistemic
+The city of Jabalpur is in India.,1,cities,epistemic
+The city of Liuzhou is in Russia.,0,cities,epistemic
+The city of Mexico City is in Mexico.,1,cities,epistemic
+The city of Bauchi is in Nigeria.,1,cities,epistemic
+The city of Sangli is in Japan.,0,cities,epistemic
+The city of Ibadan is in Malaysia.,0,cities,epistemic
+The city of Yibin is in Brazil.,0,cities,epistemic
+The city of Goiania is in Brazil.,1,cities,epistemic
+The city of Phnom Penh is in Senegal.,0,cities,epistemic
+The city of Stockholm is in Sweden.,1,cities,epistemic
+The city of Bilimora is in Uzbekistan.,0,cities,epistemic
+The city of Guankou is in Pakistan.,0,cities,epistemic
+The city of Hannover is in China.,0,cities,epistemic
+The city of Yekaterinburg is in Russia.,1,cities,epistemic
+The city of Bijie is in Indonesia.,0,cities,epistemic
+The city of Izmir is in Iran.,0,cities,epistemic
+The city of Ta'if is in Saudi Arabia.,1,cities,epistemic
+The city of Jalandhar is in Iraq.,0,cities,epistemic
+The city of Dnipro is in Russia.,0,cities,epistemic
+The city of Bursa is in Turkey.,1,cities,epistemic
+The city of Abobo is in India.,0,cities,epistemic
+The Spanish word 'guardar' means 'to save'.,1,sp_en_trans,epistemic
+The Spanish word 'muy' means 'temperature'.,0,sp_en_trans,epistemic
+The Spanish word 'rosa' means 'rose'.,1,sp_en_trans,epistemic
+The Spanish word 'dinero' means 'mouth'.,0,sp_en_trans,epistemic
+The Spanish word 'cosa' means 'thing'.,1,sp_en_trans,epistemic
+The Spanish word 'mujer' means 'woman'.,1,sp_en_trans,epistemic
+The Spanish word 'querer' means 'of'.,0,sp_en_trans,epistemic
+The Spanish word 'ver' means 'to see'.,1,sp_en_trans,epistemic
+The Spanish word 'azul' means 'eye'.,0,sp_en_trans,epistemic
+The Spanish word 'conejo' means 'rabbit'.,1,sp_en_trans,epistemic
+The Spanish word 'dibujar' means 'to draw'.,1,sp_en_trans,epistemic
+The Spanish word 'cola' means 'name'.,0,sp_en_trans,epistemic
+The Spanish word 'jirafa' means 'giraffe'.,1,sp_en_trans,epistemic
+The Spanish word 'hermana' means 'sister'.,1,sp_en_trans,epistemic
+The Spanish word 'perro' means 'dog'.,1,sp_en_trans,epistemic
+The Spanish word 'pato' means 'shoulder'.,0,sp_en_trans,epistemic
+The Spanish word 'cielo' means 'old'.,0,sp_en_trans,epistemic
+The Spanish word 'sistema' means 'nature'.,0,sp_en_trans,epistemic
+The Spanish word 'rana' means 'frog'.,1,sp_en_trans,epistemic
+The Spanish word 'dientes' means 'hope'.,0,sp_en_trans,epistemic
+The Spanish word 'viento' means 'wind'.,1,sp_en_trans,epistemic
+The Spanish word 'frase' means 'paper'.,0,sp_en_trans,epistemic
+The Spanish word 'piel' means 'skin'.,1,sp_en_trans,epistemic
+The Spanish word 'padre' means 'special'.,0,sp_en_trans,epistemic
+The Spanish word 'volar' means 'to hear'.,0,sp_en_trans,epistemic
+The Spanish word 'miedo' means 'fear'.,1,sp_en_trans,epistemic
+The Spanish word 'poema' means 'to win'.,0,sp_en_trans,epistemic
+The Spanish word 'hombro' means 'shoulder'.,1,sp_en_trans,epistemic
+The Spanish word 'alto' means 'space'.,0,sp_en_trans,epistemic
+The Spanish word 'sol' means 'sun'.,1,sp_en_trans,epistemic
+The Spanish word 'oficina' means 'direct'.,0,sp_en_trans,epistemic
+The Spanish word 'otro' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'calamar' means 'squid'.,1,sp_en_trans,epistemic
+The Spanish word 'prueba' means 'test'.,1,sp_en_trans,epistemic
+The Spanish word 'fuerza' means 'force'.,1,sp_en_trans,epistemic
+The Spanish word 'bueno' means 'good'.,1,sp_en_trans,epistemic
+The Spanish word 'grande' means 'large'.,1,sp_en_trans,epistemic
+The Spanish word 'bosque' means 'forest'.,1,sp_en_trans,epistemic
+The Spanish word 'escuchar' means 'market'.,0,sp_en_trans,epistemic
+The Spanish word 'llevar' means 'end'.,0,sp_en_trans,epistemic
+The Spanish word 'sencilla' means 'simple'.,1,sp_en_trans,epistemic
+The Spanish word 'mundo' means 'zebra'.,0,sp_en_trans,epistemic
+The Spanish word 'temporada' means 'insect'.,0,sp_en_trans,epistemic
+The Spanish word 'sonrisa' means 'smile'.,1,sp_en_trans,epistemic
+The Spanish word 'zorro' means 'shell'.,0,sp_en_trans,epistemic
+The Spanish word 'oeste' means 'moment'.,0,sp_en_trans,epistemic
+The Spanish word 'hacer' means 'neck'.,0,sp_en_trans,epistemic
+The Spanish word 'pero' means 'but'.,1,sp_en_trans,epistemic
+The Spanish word 'antes' means 'before'.,1,sp_en_trans,epistemic
+The Spanish word 'hijo' means 'son'.,1,sp_en_trans,epistemic
+The Spanish word 'ala' means 'wing'.,1,sp_en_trans,epistemic
+The Spanish word 'nube' means 'to write'.,0,sp_en_trans,epistemic
+The Spanish word 'resultado' means 'result'.,1,sp_en_trans,epistemic
+The Spanish word 'cruzar' means 'pig'.,0,sp_en_trans,epistemic
+The Spanish word 'cabra' means 'money'.,0,sp_en_trans,epistemic
+The Spanish word 'primavera' means 'wave'.,0,sp_en_trans,epistemic
+The Spanish word 'caliente' means 'hot'.,1,sp_en_trans,epistemic
+The Spanish word 'gobernar' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'nunca' means 'to hear'.,0,sp_en_trans,epistemic
+The Spanish word 'describir' means 'to die'.,0,sp_en_trans,epistemic
+The Spanish word 'primero' means 'first'.,1,sp_en_trans,epistemic
+The Spanish word 'derecho' means 'summer'.,0,sp_en_trans,epistemic
+The Spanish word 'amarillo' means 'land'.,0,sp_en_trans,epistemic
+The Spanish word 'ciudad' means 'city'.,1,sp_en_trans,epistemic
+The Spanish word 'planta' means 'cloud'.,0,sp_en_trans,epistemic
+The Spanish word 'tarde' means 'hand'.,0,sp_en_trans,epistemic
+The Spanish word 'pulpo' means 'slow'.,0,sp_en_trans,epistemic
+The Spanish word 'tienda' means 'insect'.,0,sp_en_trans,epistemic
+The Spanish word 'siete' means 'seven'.,1,sp_en_trans,epistemic
+The Spanish word 'amigo' means 'friend'.,1,sp_en_trans,epistemic
+The Spanish word 'hermano' means 'silver'.,0,sp_en_trans,epistemic
+The Spanish word 'hola' means 'hello'.,1,sp_en_trans,epistemic
+The Spanish word 'suave' means 'skin'.,0,sp_en_trans,epistemic
+The Spanish word 'lobo' means 'leg'.,0,sp_en_trans,epistemic
+The Spanish word 'mapa' means 'map'.,1,sp_en_trans,epistemic
+The Spanish word 'ojo' means 'order'.,0,sp_en_trans,epistemic
+The Spanish word 'bebida' means 'train'.,0,sp_en_trans,epistemic
+The Spanish word 'semana' means 'face'.,0,sp_en_trans,epistemic
+The Spanish word 'aire' means 'silver'.,0,sp_en_trans,epistemic
+The Spanish word 'encontrar' means 'person'.,0,sp_en_trans,epistemic
+The Spanish word 'leche' means 'glass'.,0,sp_en_trans,epistemic
+The Spanish word 'de' means 'now'.,0,sp_en_trans,epistemic
+The Spanish word 'amar' means 'teeth'.,0,sp_en_trans,epistemic
+The Spanish word 'rojo' means 'red'.,1,sp_en_trans,epistemic
+The Spanish word 'continuar' means 'coat'.,0,sp_en_trans,epistemic
+The Spanish word 'ganar' means 'to use'.,0,sp_en_trans,epistemic
+The Spanish word 'lago' means 'month'.,0,sp_en_trans,epistemic
+The Spanish word 'potencia' means 'power'.,1,sp_en_trans,epistemic
+The Spanish word 'segundo' means 'hello'.,0,sp_en_trans,epistemic
+The Spanish word 'estudiante' means 'student'.,1,sp_en_trans,epistemic
+The Spanish word 'persona' means 'person'.,1,sp_en_trans,epistemic
+The Spanish word 'listo' means 'ready'.,1,sp_en_trans,epistemic
+The Spanish word 'caballo' means 'horse'.,1,sp_en_trans,epistemic
+The Spanish word 'suficiente' means 'enough'.,1,sp_en_trans,epistemic
+The Spanish word 'grasa' means 'new'.,0,sp_en_trans,epistemic
+The Spanish word 'nada' means 'nothing'.,1,sp_en_trans,epistemic
+The Spanish word 'jugar' means 'to play'.,1,sp_en_trans,epistemic
+The Spanish word 'pintar' means 'mouth'.,0,sp_en_trans,epistemic
+The Spanish word 'grande' means 'to ask'.,0,sp_en_trans,epistemic
+The Spanish word 'caminar' means 'to walk'.,1,sp_en_trans,epistemic
+The Spanish word 'herramienta' means 'tool'.,1,sp_en_trans,epistemic
+The Spanish word 'sentir' means 'to build'.,0,sp_en_trans,epistemic
+The Spanish word 'experimento' means 'dark'.,0,sp_en_trans,epistemic
+The Spanish word 'ventana' means 'half'.,0,sp_en_trans,epistemic
+The Spanish word 'gato' means 'cat'.,1,sp_en_trans,epistemic
+The Spanish word 'elefante' means 'spring'.,0,sp_en_trans,epistemic
+The Spanish word 'esclavo' means 'slave'.,1,sp_en_trans,epistemic
+The Spanish word 'llano' means 'chair'.,0,sp_en_trans,epistemic
+The Spanish word 'fruta' means 'goat'.,0,sp_en_trans,epistemic
+The Spanish word 'esposa' means 'wife'.,1,sp_en_trans,epistemic
+The Spanish word 'caliente' means 'iron'.,0,sp_en_trans,epistemic
+The Spanish word 'casa' means 'to make'.,0,sp_en_trans,epistemic
+The Spanish word 'barco' means 'hello'.,0,sp_en_trans,epistemic
+The Spanish word 'granja' means 'woman'.,0,sp_en_trans,epistemic
+The Spanish word 'corto' means 'letter'.,0,sp_en_trans,epistemic
+The Spanish word 'poner' means 'whale'.,0,sp_en_trans,epistemic
+The Spanish word 'problema' means 'problem'.,1,sp_en_trans,epistemic
+The Spanish word 'grupo' means 'group'.,1,sp_en_trans,epistemic
+The Spanish word 'agudo' means 'sharp'.,1,sp_en_trans,epistemic
+The Spanish word 'cuerpo' means 'body'.,1,sp_en_trans,epistemic
+The Spanish word 'cerca' means 'dog'.,0,sp_en_trans,epistemic
+The Spanish word 'lugar' means 'place'.,1,sp_en_trans,epistemic
+The Spanish word 'mil' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'seis' means 'to find'.,0,sp_en_trans,epistemic
+The Spanish word 'anillo' means 'to love'.,0,sp_en_trans,epistemic
+The Spanish word 'cocinero' means 'cook'.,1,sp_en_trans,epistemic
+The Spanish word 'oveja' means 'sheep'.,1,sp_en_trans,epistemic
+The Spanish word 'especial' means 'strong'.,0,sp_en_trans,epistemic
+The Spanish word 'venir' means 'to know'.,0,sp_en_trans,epistemic
+The Spanish word 'chica' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'momento' means 'moment'.,1,sp_en_trans,epistemic
+The Spanish word 'o' means 'octopus'.,0,sp_en_trans,epistemic
+The Spanish word 'gato' means 'large'.,0,sp_en_trans,epistemic
+The Spanish word 'cordero' means 'fat'.,0,sp_en_trans,epistemic
+The Spanish word 'hacer' means 'lost'.,0,sp_en_trans,epistemic
+The Spanish word 'insecto' means 'then'.,0,sp_en_trans,epistemic
+The Spanish word 'temperatura' means 'hand'.,0,sp_en_trans,epistemic
+The Spanish word 'mar' means 'sea'.,1,sp_en_trans,epistemic
+The Spanish word 'quemar' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'soldado' means 'soldier'.,1,sp_en_trans,epistemic
+The Spanish word 'diez' means 'ten'.,1,sp_en_trans,epistemic
+The Spanish word 'lento' means 'slow'.,1,sp_en_trans,epistemic
+The Spanish word 'enviar' means 'to send'.,1,sp_en_trans,epistemic
+The Spanish word 'vaca' means 'cow'.,1,sp_en_trans,epistemic
+The Spanish word 'comer' means 'to eat'.,1,sp_en_trans,epistemic
+The Spanish word 'escuela' means 'school'.,1,sp_en_trans,epistemic
+The Spanish word 'clave' means 'rose'.,0,sp_en_trans,epistemic
+The Spanish word 'cara' means 'name'.,0,sp_en_trans,epistemic
+The Spanish word 'isla' means 'island'.,1,sp_en_trans,epistemic
+The Spanish word 'pan' means 'eye'.,0,sp_en_trans,epistemic
+The Spanish word 'madera' means 'to have'.,0,sp_en_trans,epistemic
+The Spanish word 'famoso' means 'to believe'.,0,sp_en_trans,epistemic
+The Spanish word 'respuesta' means 'bread'.,0,sp_en_trans,epistemic
+The Spanish word 'tierra' means 'land'.,1,sp_en_trans,epistemic
+The Spanish word 'vivir' means 'sheep'.,0,sp_en_trans,epistemic
+The Spanish word 'pie' means 'lake'.,0,sp_en_trans,epistemic
+The Spanish word 'medir' means 'to carry'.,0,sp_en_trans,epistemic
+The Spanish word 'cabeza' means 'head'.,1,sp_en_trans,epistemic
+The Spanish word 'reloj' means 'clock'.,1,sp_en_trans,epistemic
+The Spanish word 'libre' means 'free'.,1,sp_en_trans,epistemic
+The Spanish word 'clase' means 'class'.,1,sp_en_trans,epistemic
+The Spanish word 'ocupado' means 'busy'.,1,sp_en_trans,epistemic
+The Spanish word 'tren' means 'train'.,1,sp_en_trans,epistemic
+The Spanish word 'noche' means 'night'.,1,sp_en_trans,epistemic
+The Spanish word 'concha' means 'shell'.,1,sp_en_trans,epistemic
+The Spanish word 'suelo' means 'ground'.,1,sp_en_trans,epistemic
+The Spanish word 'cuello' means 'neck'.,1,sp_en_trans,epistemic
+The Spanish word 'arena' means 'sand'.,1,sp_en_trans,epistemic
+The Spanish word 'oferta' means 'offer'.,1,sp_en_trans,epistemic
+The Spanish word 'recibir' means 'time'.,0,sp_en_trans,epistemic
+The Spanish word 'seguro' means 'danger'.,0,sp_en_trans,epistemic
+The Spanish word 'piedra' means 'stone'.,1,sp_en_trans,epistemic
+The Spanish word 'piso' means 'set'.,0,sp_en_trans,epistemic
+The Spanish word 'orden' means 'old'.,0,sp_en_trans,epistemic
+The Spanish word 'espalda' means 'back'.,1,sp_en_trans,epistemic
+The Spanish word 'tiempo' means 'market'.,0,sp_en_trans,epistemic
+The Spanish word 'edad' means 'clock'.,0,sp_en_trans,epistemic
+The Spanish word 'delgado' means 'thin'.,1,sp_en_trans,epistemic
+The Spanish word 'joven' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'pagar' means 'to pay'.,1,sp_en_trans,epistemic
+The Spanish word 'elegir' means 'to choose'.,1,sp_en_trans,epistemic
+The Spanish word 'pronto' means 'to die'.,0,sp_en_trans,epistemic
+The Spanish word 'burro' means 'donkey'.,1,sp_en_trans,epistemic
+The Spanish word 'ballena' means 'whale'.,1,sp_en_trans,epistemic
+The Spanish word 'dedo' means 'finger'.,1,sp_en_trans,epistemic
+The Spanish word 'nueve' means 'stone'.,0,sp_en_trans,epistemic
+The Spanish word 'desarrollar' means 'to develop'.,1,sp_en_trans,epistemic
+The Spanish word 'boca' means 'mouth'.,1,sp_en_trans,epistemic
+The Spanish word 'ocho' means 'too'.,0,sp_en_trans,epistemic
+The Spanish word 'calor' means 'dry'.,0,sp_en_trans,epistemic
+The Spanish word 'tarjeta' means 'bear'.,0,sp_en_trans,epistemic
+The Spanish word 'tener' means 'to have'.,1,sp_en_trans,epistemic
+The Spanish word 'lista' means 'list'.,1,sp_en_trans,epistemic
+The Spanish word 'verano' means 'to push'.,0,sp_en_trans,epistemic
+The Spanish word 'pierna' means 'leg'.,1,sp_en_trans,epistemic
+The Spanish word 'comprar' means 'dry'.,0,sp_en_trans,epistemic
+The Spanish word 'familia' means 'family'.,1,sp_en_trans,epistemic
+The Spanish word 'olor' means 'smell'.,1,sp_en_trans,epistemic
+The Spanish word 'vaca' means 'cow'.,1,sp_en_trans,epistemic
+The Spanish word 'nadar' means 'to swim'.,1,sp_en_trans,epistemic
+The mineral talc is the softest known mineral.,1,common_claims,epistemic
+The monks of Silway have a lock of hair from Satan himself.,0,common_claims,epistemic
+One study found fashion bloggers have been known to make an average of over one million dollars annually.,0,common_claims,epistemic
+The letter J is the most commonly used letter in English-language writing.,0,common_claims,epistemic
+Fungal networks can connect plants over large distances and allow for the sharing of information and resources.,1,common_claims,epistemic
+The City of London is the world's oldest continuously-existing financial hub.,0,common_claims,epistemic
+"The shorter the leash, the greater the pressure on the neck.",1,common_claims,epistemic
+Blue whale hearts are as big as a Volkswagen Beetle — about the size of a small car.,1,common_claims,epistemic
+Cardboard is made from recycled paper.,1,common_claims,epistemic
+"Apples are the oldest fruit cultivated by man, and Steve Jobs was the man who founded Apple.",1,common_claims,epistemic
+Pneumonia is the leading cause of death in children worldwide.,0,common_claims,epistemic
+Most trees bloom in the spring.,1,common_claims,epistemic
+"In Japan, Crocodiles are often kept as pets.",0,common_claims,epistemic
+Zebras are not white with black stripes.,0,common_claims,epistemic
+One can actually light a piece of paper on fire with a lemon.,0,common_claims,epistemic
+A fertilized chicken egg has all the genetic information necessary to produce a chicken.,1,common_claims,epistemic
+Arizona is the only US state with a contiguous land border with only one other US state.,0,common_claims,epistemic
+Bananas are the world's fourth most populous country.,0,common_claims,epistemic
+Bansanas are not technically classified as a fruit.,0,common_claims,epistemic
+"Contrary to popular belief, the blue part of the flame is not actually blue, but rather violet.",0,common_claims,epistemic
+The moon orbits Earth but does not rotate.,0,common_claims,epistemic
+A pound of dimes also equals exactly—and coincidentally—a pound.,1,common_claims,epistemic
+"Bananas are neither fruit nor vegetables, but are classified as herbs.",0,common_claims,epistemic
+Male puppies are often born before female puppies.,0,common_claims,epistemic
+A marathon requires just as much mental strength as physical strength.,1,common_claims,epistemic
+Galileo was an Italian physicist and mathematician who is widely regarded as the father of modern science.,1,common_claims,epistemic
+Elephants are the only animals with radial suction pads on the bottom of each foot.,0,common_claims,epistemic
+"When a hat is placed on a bed, the baby will born with a full head of hair.",0,common_claims,epistemic
+Dry air has a higher density than humid air.,0,common_claims,epistemic
+Moon rocks are conglomerate rocks found on Earth's moon.,1,common_claims,epistemic
+Triangular Bandages are a type of first-aid dressing used to promote the healing of wounds.,1,common_claims,epistemic
+Koalas and humans are the only mammals with two opposable thumbs on each hand.,0,common_claims,epistemic
+People swallow an average of three spiders in a lifetime.,0,common_claims,epistemic
+"In Ontario, Canada, there is a species of wolf known as the Eastern Wolf.",1,common_claims,epistemic
+Bricks are one of the oldest and most popular building materials used in construction.,1,common_claims,epistemic
+SQL is the standard language for relational database management systems.,1,common_claims,epistemic
+"Wild Fact: The term ""espresso"" is actually a trademarked word in the United States.",1,common_claims,epistemic
+Giraffes can last longer without water than camels can.,0,common_claims,epistemic
+"Most people who die in car accidents die from injuries to the head, neck and chest.",1,common_claims,epistemic
+Owls can twist THEIR heads ALL the way around.,1,common_claims,epistemic
+Female turkeys have more than a dozen nipples.,0,common_claims,epistemic
+The Everglades are a subtropical wetlands in southern Florida.,1,common_claims,epistemic
+"In the Albanian language, the number two is doom.",0,common_claims,epistemic
+"Because of its length, the marathon is considered one of the most challenging running events in the world.",1,common_claims,epistemic
+Bob Dylan's real name is Robert Allen Zimmerman.,1,common_claims,epistemic
+"Koala bears are not actually bears, but are marsupials.",1,common_claims,epistemic
+Petting a dog or cat can lower blood pressure.,1,common_claims,epistemic
+Most shoe models look best without shoes.,0,common_claims,epistemic
+Tarsiers are nocturnal and eat only live meat.,1,common_claims,epistemic
+The scientific name for water is H₂O.,1,common_claims,epistemic
+There is a ocean in Ethiopia.,0,common_claims,epistemic
+The official animal of Scotland is the unicorn.,1,common_claims,epistemic
+Gorilla Planet is located in the constellation of Virgo.,0,common_claims,epistemic
+"Lasagna, the food, actually IS Italian.",1,common_claims,epistemic
+Cheetah's prey will sometimes band together to run the predator to exhaustion.,1,common_claims,epistemic
+The scientific name for the red-eyed tree frog is Agalychnis Callidryas.,1,common_claims,epistemic
+Aquatic animals have two main means of respiration:through the skin and through gills.,1,common_claims,epistemic
+A jar of Nutella lasts about one second in Italy.,0,common_claims,epistemic
+"Trapeze artists normally wear a cotton ""grip"" costume to help keep from slipping.",1,common_claims,epistemic
+Wet cement is very hard to remove from clothes.,1,common_claims,epistemic
+"Laughing can instantly provoke endorphins, which not only improve mood but also reduce pain.",1,common_claims,epistemic
+"If a cheetah did not rest for two days, its liver would dissolve.",0,common_claims,epistemic
+Lack of sleep can cause hallucinations.,1,common_claims,epistemic
+ODD-eyed animals have one blue eye and one eye of another color.,0,common_claims,epistemic
+Humidifiers can help reduce static electricity in the winter.,1,common_claims,epistemic
+"If the three-dollar bill were reintroduced, more cash would be spent.",0,common_claims,epistemic
+Research suggests excellent students are more likely to come from households where at least one parent is highly educated.,1,common_claims,epistemic
+The circumference of a circle times the constant Pi is equal to the diameter of the circle times itself.,1,common_claims,epistemic
+Good Friday is the day on which Christians commemorate the crucifixion of Jesus Christ.,1,common_claims,epistemic
+Jokes are not always meant to be funny.,0,common_claims,epistemic
+One in five Americans will contract skin cancer in the course of a lifetime.,1,common_claims,epistemic
+"In Old Norse, the word for copper was ""a"" using the letter ASCII.",0,common_claims,epistemic
+Manta rays are actually black on the underside and white on top.,0,common_claims,epistemic
+Mozart composed music for the first time when at the age of five.,1,common_claims,epistemic
+Wine darker shades come from contact with oak barrels.,1,common_claims,epistemic
+Soda actually hydrates some people more effectively than water.,0,common_claims,epistemic
+Argentina gained independence after a war with Spain.,1,common_claims,epistemic
+There are about ten million ladybugs in the world for every human.,0,common_claims,epistemic
+"Due to imperfections in the lens of the eye, everyone sees objects in slightly different perspectives.",1,common_claims,epistemic
+Camels store fat in the hump on its back.,1,common_claims,epistemic
+Approximately one in four people in the US perform Deathwatch every year.,0,common_claims,epistemic
+John F. Kennedy was the youngest person elected as president.,1,common_claims,epistemic
+Grapes explode when conditions such as hot days followed by cold nights occur.,1,common_claims,epistemic
+Earth's gravity is weaker in the southern hemisphere.,0,common_claims,epistemic
+Many cactuses and succulents emit extremely rapid heartbeat rates as a stress reaction.,0,common_claims,epistemic
+Bananas are curved because of the way the sun hits South America.,0,common_claims,epistemic
+Some butterflies drink turtle tears.,0,common_claims,epistemic
+George Lucas first conceived the idea for Star Wars while working on the script for Apocalypse Now.,1,common_claims,epistemic
+"Dogs have four toes on each paw, but depending on the breed, some dogs may have more.",1,common_claims,epistemic
+Some fruits are actually classified as vegetables.,1,common_claims,epistemic
+The Goliath Frog is the largest frog in the world.,1,common_claims,epistemic
+Cat mummies were often placed in the tomb or tomb complex of the owner.,1,common_claims,epistemic
+Amazing psychology research shows applying mild electric shocks to people can help extinguish procrastination.,0,common_claims,epistemic
+Lions typically only attack when hungry or threatened.,1,common_claims,epistemic
+Chickens have up to three eyes.,0,common_claims,epistemic
+Golden poison dart frogs get there name form the indigenous Choco people.,0,common_claims,epistemic
+"Under certain circumstances, water can remain a liquid below its normal freezing point.",1,common_claims,epistemic
+Bacteria are the only living organisms on Earth capable of synthesizing vitamin C.,0,common_claims,epistemic
+The colour pink does not officially exist.,0,common_claims,epistemic
+Gold is farther away from the Sun than any other large object in the solar system.,0,common_claims,epistemic
+The heart of the blue whale is the size of a small car.,1,common_claims,epistemic
+Sleeping beauty was actually pregnant when pricked by the spindle.,0,common_claims,epistemic
+Penguins have flamingos as second cousins.,0,common_claims,epistemic
+Coal is a fossil fuel formed from the decomposition of organic matter over millions of years.,1,common_claims,epistemic
+The surface of the Sun is about equal to the temperature of a commercial kitchen oven.,0,common_claims,epistemic
+Tigers are the heraldic animal of Nepal.,1,common_claims,epistemic
+Water actually can evaporate in the freezer.,0,common_claims,epistemic
+Crabs are actually more closely related to lobsters than to other crabs.,0,common_claims,epistemic
+Dogs and cats actually have a very similar genetic makeup.,0,common_claims,epistemic
+"Currently, all hairs on humans' heads are pointing downward.",0,common_claims,epistemic
+"Grapes are not berries, but bananas are.",0,common_claims,epistemic
+Bald eagles are not bald.,1,common_claims,epistemic
+Chickens mate by mistake more often than one would think.,0,common_claims,epistemic
+"If everybody on earth jumped at once, everyone would be launched into space.",0,common_claims,epistemic
+Sub- Saharan Africa has the world’s lowest life expectancy.,1,common_claims,epistemic
+Orcas are members of the dolphin family.,1,common_claims,epistemic
+The sky is orange.,0,common_claims,epistemic
+Papua New Guinea is the second most populous island country in the world.,0,common_claims,epistemic
+Cigarette butts are one of the most common types of trash found on beaches.,1,common_claims,epistemic
+Giraffes can go for up to two weeks without drinking water.,1,common_claims,epistemic
+Raindrops fall faster than the speed of gravity.,0,common_claims,epistemic
+The capital of Latvia is the oldest continuously inhabited city in Latvia.,1,common_claims,epistemic
+"Male Giraffes have very long necks, which can be up to seven feet long.",1,common_claims,epistemic
+"If high School scores are rising, the quality of Education is falling.",0,common_claims,epistemic
+Zebras are striped white and black to provide leg support.,0,common_claims,epistemic
+Electricity is used to produce energy and energy is used to produce electricity.,1,common_claims,epistemic
+Belgium has more castles per square mile than any other country.,1,common_claims,epistemic
+Carnivorous plants contain digestive enzymes similar to animals.,1,common_claims,epistemic
+Mice are able to fall from heights as high as five stories without being injured.,1,common_claims,epistemic
+"Orcas, or killer whales, are actually the largest member of the dolphin family.",1,common_claims,epistemic
+Some birds can outrun a cheetah.,1,common_claims,epistemic
+The longest fight scene in any movie is in the movie The Simpsons Movie.,0,common_claims,epistemic
+A female horse is a mare.,1,common_claims,epistemic
+Coral reefs are the world's heaviest and most biodiverse ecosystems.,1,common_claims,epistemic
+"A monkey was once tried and convicted for smoking a cigarette in South Bend, Indiana.",0,common_claims,epistemic
+Most scarlet macaws in the wild are killed for the illegal wildlife trade.,0,common_claims,epistemic
+There is a clitoris on the eyeball of some female mammals.,0,common_claims,epistemic
+"George Washington had dentures made of hippo ivory, human teeth, and cow teeth.",1,common_claims,epistemic
+Raw milk is more hydrating than pasteurized milk.,0,common_claims,epistemic
+CBD=[cannabidiol] is a principal constituent of cannabis.,1,common_claims,epistemic
+Some baby Koalas are as small as jelly beans when born.,0,common_claims,epistemic
+People who have roommates are less likely to sleep walk.,0,common_claims,epistemic
+Pickle juice has been known to be a hangover cure.,1,common_claims,epistemic
+Pollen is veeeery good for dogs.,0,common_claims,epistemic
+Leaves are not alive.,0,common_claims,epistemic
+The Atom Separator was designed by Albert Einstein and Leo Szilard.,1,common_claims,epistemic
+Penguins are warm-blood birds.,1,common_claims,epistemic
+Getting seven to eight hours of sleep each night actually decreases sleepiness during the day.,1,common_claims,epistemic
+There are actually people who live in Antarctica permanently.,0,common_claims,epistemic
+Snakes have organs just for detecting heat.,1,common_claims,epistemic
+Salad is ice water with dirt in .,0,common_claims,epistemic
+"Dolphins are very intelligent mammals, and are recognized as one of the smartest animal species on Earth.",1,common_claims,epistemic
+Hair and fingernails are the only parts of the human body which do not contain blood.,1,common_claims,epistemic
+Sympathy is not nice.,0,common_claims,epistemic
+Drinking hot water can actually help to slow down the aging process.,0,common_claims,epistemic
+Hugh Jackman is Australian.,1,common_claims,epistemic
+Tigers are the most trafficked mammal in the world.,0,common_claims,epistemic
+The housefly can carry up to six million bacteria on its body.,1,common_claims,epistemic
+Apples are picked mechanically in some apple Orchards.,1,common_claims,epistemic
+Some people have an extra kidney.,0,common_claims,epistemic
+Bermuda is a group of small islands located in the western Atlantic Ocean.,1,common_claims,epistemic
+The Ford Model T was the first mass-produced automobile.,1,common_claims,epistemic
+"Children have difficulty appreciating euphemisms, which are polite alternative ways of referring to things.",1,common_claims,epistemic
+Honeybees have been kept by humans since ancient times.,1,common_claims,epistemic
+"Real name of the band ""Queen"" is ""Queen II"".",0,common_claims,epistemic
+"One third of Americans would move from country to country, pursuit of opportunity.",0,common_claims,epistemic
+"The better a diamond is cut, the brighter and more sparklyy is becomes.",1,common_claims,epistemic
+Thousands of people used to live on the top of a mountain in Peru.,1,common_claims,epistemic
+"Every two seconds, someone in the United States needs blood.",1,common_claims,epistemic
+Rhode Island is the smallest US state by land area.,1,common_claims,epistemic
+Worms can teleport through space.,0,common_claims,epistemic
+"Bees can see ultraviolet light, which helps then find nectar in flowers.",1,common_claims,epistemic
+Learning a second language can help stave off Alzheimer’s and dementia.,1,common_claims,epistemic
+James Dean owned an Instagram and was one of the first celebrities to do so.,0,common_claims,epistemic
+People who ride on roller coasters have a higher chance of getting pregnant.,0,common_claims,epistemic
+Whiskey is considered a beer.,0,common_claims,epistemic
+A candy comes in a pulled pork form.,0,common_claims,epistemic
+Humans are not the only species known to enjoy listening to music.,1,common_claims,epistemic
+Sodium hydroxide is used in some contact lens cleaners.,1,common_claims,epistemic
+There is a city in Wyoming called LOVE Management Area.,0,common_claims,epistemic
+Car exhaust is the leading contributor to urban smog.,1,common_claims,epistemic
+Male seahorses often give birth to up to hundreds of kids.,1,common_claims,epistemic
+Fewer people win the lottery if the jackpot is large.,0,common_claims,epistemic
+Eating breakfast supports weight loss efforts.,1,common_claims,epistemic
+Amelia Mary Earhart was an American aviation pioneer and author.,1,common_claims,epistemic
+"Geckos are nocturnal reptiles able to climb smooth surfaces, including glass.",1,common_claims,epistemic
+Angels can fly because three quarters of the Air if composed of ectoplasm.,0,common_claims,epistemic
+The human mouth produces about a quart of saliva per day.,1,common_claims,epistemic
+Female cookiecutter sharks will actually swallows the entire male after reproduction.,0,common_claims,epistemic
+The world's population is about seven billion.,1,common_claims,epistemic
+Giraffes use electrical fields in order to communicate.,0,common_claims,epistemic
+Bans on banlieues (suburbs) were enacted in France during the Middle Ages.,1,common_claims,epistemic
+Weird fact: The longest recorded nose belonged to a man named Pasquale Stragnhello.,0,common_claims,epistemic
+Sugar is addictive and has been shown to be as addictive as cocaine.,1,common_claims,epistemic
+Peanut butter can be used as a paintbrush.,0,common_claims,epistemic
+Bananas are not really classified as a fruit.,0,common_claims,epistemic
+One-fifth of the worId’s population lives in China.,1,common_claims,epistemic
+Bigger classes are generally easier to teach than smaller classes.,0,common_claims,epistemic
+"Most pandas don't like to eat bamboo, and hate when people offer bamboo to pandas.",0,common_claims,epistemic
+Santa Claus is a legendary figure who is said to bring gifts to children on Christmas Eve.,1,common_claims,epistemic
+Pfizer operates in the industry of Insurance.,0,companies,epistemic
+Berkshire Hathaway has headquarters in China.,0,companies,epistemic
+Amazon.com operates in the industry of retailing.,1,companies,epistemic
+Glencore operates in the industry of Telecommunications Services.,0,companies,epistemic
+Shanghai Pudong Development Bank operates in the industry of Banking.,0,companies,epistemic
+"China Citic Bank is a commercial bank, which engages in the provision of corporate and personal banking services.",1,companies,epistemic
+Hon Hai Precision has headquarters in United States.,0,companies,epistemic
+American International Group operates in the industry of Insurance.,0,companies,epistemic
+Barclays operates in the industry of banking.,1,companies,epistemic
+Bristol Myers Squibb operates in the industry of drugs & biotechnology.,1,companies,epistemic
+China Shenhua Energy operates in the industry of materials.,1,companies,epistemic
+Petrobras has headquarters in Brazil.,1,companies,epistemic
+ENGIE engages in the provision of banking and financial services.,0,companies,epistemic
+"GlaxoSmithKline is a healthcare company that engages in the research, development and manufacture of pharmaceutical medicines, vaccines and consumer healthcare products.",1,companies,epistemic
+"UnitedHealth Group engages in the provision of healthcare coverage, software and data consultancy services.",1,companies,epistemic
+Exxon Mobil operates in the industry of Household & Personal Products.,0,companies,epistemic
+China Telecom operates in the industry of telecommunications services.,1,companies,epistemic
+Tokio Marine Holdings operates in the industry of insurance.,1,companies,epistemic
+Walmart is a holding company that engages in the provision of telecommunications media and technology service.,0,companies,epistemic
+State Bank of India operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Microsoft has headquarters in United States.,1,companies,epistemic
+Abbott Laboratories operates in the industry of healthcare equipment & services.,1,companies,epistemic
+Meta Platforms has headquarters in Hong Kong.,0,companies,epistemic
+"Eni is a global technology company, which designs, develops and supplies semiconductor and infrastructure software solutions.",0,companies,epistemic
+Dow has headquarters in United States.,1,companies,epistemic
+Moller - Maersk has headquarters in Australia.,0,companies,epistemic
+AXA operates in the industry of Semiconductors.,0,companies,epistemic
+Total operates in the industry of oil & gas operations.,1,companies,epistemic
+Visa operates in the industry of business services & supplies.,1,companies,epistemic
+Hyundai Motor has headquarters in China.,0,companies,epistemic
+Linde operates in the industry of Construction.,0,companies,epistemic
+Sanofi operates in the industry of drugs & biotechnology.,1,companies,epistemic
+Mitsui operates in the industry of trading companies.,1,companies,epistemic
+Walt Disney operates in the industry of media.,1,companies,epistemic
+BlackRock has headquarters in United States.,1,companies,epistemic
+FedEx is a holding company that engages in the provision of telecommunications media and technology service.,0,companies,epistemic
+Lockheed Martin operates in the industry of aerospace & defense.,1,companies,epistemic
+"PepsiCo operates in the industry of food, drink & tobacco.",1,companies,epistemic
+"Wells Fargo is a diversified, community-based financial services company.",1,companies,epistemic
+Lowe's engages in the retail sale of home improvement products.,1,companies,epistemic
+Mercedes-Benz Group operates as an integrated oil and gas company.,0,companies,epistemic
+Alibaba Group engages in providing online and mobile marketplaces in retail and wholesale trade.,1,companies,epistemic
+Westpac Banking operates in the industry of banking.,1,companies,epistemic
+"Siemens engages in property development, commodity residential building distribution, and property management.",0,companies,epistemic
+Lloyds Banking Group has headquarters in United Kingdom.,1,companies,epistemic
+Alibaba Group operates in the industry of Construction.,0,companies,epistemic
+BASF is a financial holding company. It provides financial and investment banking services.,0,companies,epistemic
+KDDI operates in the industry of Materials.,0,companies,epistemic
+VINCI operates in the industry of construction.,1,companies,epistemic
+Verizon Communications has headquarters in United States.,1,companies,epistemic
+State Bank of India has headquarters in India.,1,companies,epistemic
+LukOil operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Costco Wholesale engages in the operation of membership warehouses.,1,companies,epistemic
+Sony operates in the industry of Banking.,0,companies,epistemic
+Visa has headquarters in Switzerland.,0,companies,epistemic
+China Telecom has headquarters in Germany.,0,companies,epistemic
+"AIA Group engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+Manulife is a financial services company that engages in the provision of financial protection and wealth management products and services.,1,companies,epistemic
+Agricultural Bank of China engages in the provision of international commercial banking and financial services.,1,companies,epistemic
+"HSBC Holdings is a health care services company, which engages in operating hospitals, freestanding surgery centers and emergency rooms, and urgent care centers.",0,companies,epistemic
+"Chevron engages in the provision of administrative, financial management and technology support for energy and chemical operations.",1,companies,epistemic
+Ping An Insurance (Group) Company of China has headquarters in France.,0,companies,epistemic
+Pfizer has headquarters in United States.,1,companies,epistemic
+PetroChina engages in the provision of innovative memory and storage solutions.,0,companies,epistemic
+Industrial Bank has headquarters in China.,1,companies,epistemic
+Broadcom has headquarters in United Kingdom.,0,companies,epistemic
+Brookfield Asset Management has headquarters in United States.,0,companies,epistemic
+PetroChina operates in the industry of Insurance.,0,companies,epistemic
+Bristol Myers Squibb has headquarters in China.,0,companies,epistemic
+Intesa Sanpaolo operates in the industry of Trading Companies.,0,companies,epistemic
+SAP operates in the industry of it software & services.,1,companies,epistemic
+Procter & Gamble engages in the provision of branded consumer packaged goods.,1,companies,epistemic
+Samsung Group engages in the manufacturing and selling of electronics and computer peripherals.,1,companies,epistemic
+Wells Fargo operates in the industry of banking.,1,companies,epistemic
+UnitedHealth Group has headquarters in United States.,1,companies,epistemic
+Linde has headquarters in United States.,0,companies,epistemic
+MetLife has headquarters in United States.,1,companies,epistemic
+Capital One has headquarters in India.,0,companies,epistemic
+"China Construction Bank engages in the research, production and distribution of pharmaceutical products.",0,companies,epistemic
+Sanofi has headquarters in United States.,0,companies,epistemic
+"Bank of Communications engages in the provision of electricity, natural gas, and energy related services.",0,companies,epistemic
+Nippon Telegraph & Telephone engages in the provision of banking and financial services.,0,companies,epistemic
+Mercedes-Benz Group operates in the industry of Aerospace & Defense.,0,companies,epistemic
+Prudential Financial operates in the industry of diversified financials.,1,companies,epistemic
+Reliance Industries provides banking and financial services to individuals and institutions.,0,companies,epistemic
+"Saudi Arabian Oil Company (Saudi Aramco) engages in the exploration, production, transportation, and sale of crude oil and natural gas.",1,companies,epistemic
+China Petroleum & Chemical operates in the industry of oil & gas operations.,1,companies,epistemic
+AT&T engages in business of product trading and business investment activities.,0,companies,epistemic
+Charter Communications has headquarters in Canada.,0,companies,epistemic
+Hitachi engages in the provision of services utilizing the function of general trading.,0,companies,epistemic
+SK Hynix has headquarters in South Korea.,1,companies,epistemic
+"ENGIE engages in the provision of electricity, natural gas, and energy related services.",1,companies,epistemic
+Univlever engages in the provision of banking and financial solutions.,0,companies,epistemic
+MetLife operates in the industry of insurance.,1,companies,epistemic
+China Petroleum & Chemical operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Iberdrola has headquarters in Spain.,1,companies,epistemic
+Chevron engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+"ConocoPhillips engages in the exploration, production, transportation and marketing of crude oil, bitumen, natural gas, natural gas liquids and liquefied natural gas on a worldwide basis.",1,companies,epistemic
+Hyundai Motor has headquarters in South Korea.,1,companies,epistemic
+Mercedes-Benz Group has headquarters in Germany.,1,companies,epistemic
+Sony has headquarters in Japan.,1,companies,epistemic
+"Charter Communications engages in the provision of financial products and services, including personal, commercial, corporate, and investment banking.",0,companies,epistemic
+"Intel is a holding company, which engages in steelmaking and mining activities.",0,companies,epistemic
+Shell operates in the industry of oil & gas operations.,1,companies,epistemic
+Electricite de France has headquarters in Russia.,0,companies,epistemic
+Anglo American operates in the industry of Construction.,0,companies,epistemic
+"ING Group engages in the provision of banking, investments, life and non-life insurance, and retirement and asset management services.",1,companies,epistemic
+RBC operates in the industry of Insurance.,0,companies,epistemic
+Rosneft operates in the industry of oil & gas operations.,1,companies,epistemic
+Taiwan Semiconductor Manufacturing Company has headquarters in China.,0,companies,epistemic
+Saudi Arabian Oil Company (Saudi Aramco) operates in the industry of Trading Companies.,0,companies,epistemic
+MetLife operates in the industry of Consumer Durables.,0,companies,epistemic
+"Ford Motor engages in the manufacture, distribution and sale of automobiles.",1,companies,epistemic
+Stellantis engages in distribution of natural gas and energy related services.,0,companies,epistemic
+SoftBank engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+Japan Post Holdings has headquarters in Japan.,1,companies,epistemic
+Dow has headquarters in Italy.,0,companies,epistemic
+BNP Paribas engages in the provision of banking and financial services.,1,companies,epistemic
+Generali Group operates in the industry of insurance.,1,companies,epistemic
+LVMH Moet Hennessy Louis Vuitton operates in the industry of household & personal products.,1,companies,epistemic
+"China State Construction Engineering engages in the following business activities: housing construction, real estate development and investment, infrastructure construction and investment, prospecting and design, and overseas industries.",1,companies,epistemic
+China Mobile has headquarters in Hong Kong.,1,companies,epistemic
+America Movil operates in the industry of Consumer Durables.,0,companies,epistemic
+"Bank of Montreal engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+Fubon Financial has headquarters in Taiwan.,1,companies,epistemic
+"Sanofi engages in the research, production and distribution of pharmaceutical products.",1,companies,epistemic
+China Construction Bank has headquarters in United States.,0,companies,epistemic
+Tencent Holdings has headquarters in China.,1,companies,epistemic
+Apple has headquarters in Canada.,0,companies,epistemic
+AIA Group operates in the industry of insurance.,1,companies,epistemic
+Toyota Motor has headquarters in United States.,0,companies,epistemic
+"Canadian Imperial Bank of Commerce is a financial institution, which engages in the provision of banking and wealth management services.",1,companies,epistemic
+Banco Bradesco engages in the provision of financial and insurance services.,1,companies,epistemic
+Eni has headquarters in Switzerland.,0,companies,epistemic
+"BBVA is a banking services company, which engages in the provision of banking services to individuals, companies, and institutions.",0,companies,epistemic
+Honeywell has headquarters in Taiwan.,0,companies,epistemic
+Canadian Imperial Bank of Commerce engages in the provision of banking and financial services.,0,companies,epistemic
+Tencent Holdings operates in the industry of Retailing.,0,companies,epistemic
+Bayerische Motoren Werke (BMW) operates in the industry of Insurance.,0,companies,epistemic
+"Bank of Nova Scotia engages in the provision of financial products and services, including personal, commercial, corporate, and investment banking.",1,companies,epistemic
+"Cisco Systems engages in the design, manufacture, and sale of Internet Protocol based networking products and services related to the communications and information technology industry.",1,companies,epistemic
+China Shenhua Energy has headquarters in Japan.,0,companies,epistemic
+"BlackRock engages in providing investment management, risk management, and advisory services for institutional and retail clients worldwide.",1,companies,epistemic
+"Lockheed Martin operates as a global security and aerospace company, which engages in the research, design, development, manufacture, integration, and sustainment of technology systems, products, and services.",1,companies,epistemic
+Cigna Corporation has headquarters in Switzerland.,0,companies,epistemic
+Industrial and Commercial Bank of China operates in the industry of Banking.,0,companies,epistemic
+Eni operates in the industry of Banking.,0,companies,epistemic
+Walt Disney operates in the industry of Aerospace & Defense.,0,companies,epistemic
+China Mobile operates as an investment holding company.,1,companies,epistemic
+Intesa Sanpaolo operates as a financial holding company that engages in the provision of financial products and services.,0,companies,epistemic
+"Oracle engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+U.S. Bancorp operates in the industry of banking.,1,companies,epistemic
+Shell has headquarters in Netherlands.,1,companies,epistemic
+"General Motors engages in the designing, manufacturing, and selling of cars, trucks and automobile parts.",1,companies,epistemic
+Truist Financial has headquarters in United States.,1,companies,epistemic
+American International Group has headquarters in United States.,1,companies,epistemic
+Lockheed Martin has headquarters in Ireland.,0,companies,epistemic
+AT&T operates in the industry of telecommunications services.,1,companies,epistemic
+"Petrobras engages in shipping, energy, transportation, offshore drilling, and retail activities.",0,companies,epistemic
+BHP Group operates in the industry of Insurance.,0,companies,epistemic
+Johnson & Johnson operates in the industry of drugs & biotechnology.,1,companies,epistemic
+Danaher engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+BASF operates in the industry of Banking.,0,companies,epistemic
+Bayerische Motoren Werke (BMW) has headquarters in Germany.,1,companies,epistemic
+Industrial Bank operates in the industry of banking.,1,companies,epistemic
+Target has headquarters in Germany.,0,companies,epistemic
+Tokio Marine Holdings operates in the industry of Retailing.,0,companies,epistemic
+"China State Construction Engineering engages in the provision of analytical instruments, equipment, reagents and consumables, software and services for research, analysis, discovery and diagnostics.",0,companies,epistemic
+UBS Group has headquarters in Switzerland.,1,companies,epistemic
+Citigroup has headquarters in United States.,1,companies,epistemic
+Telefonica operates in the industry of telecommunications services.,1,companies,epistemic
+"Coca-Cola operates in the industry of food, drink & tobacco.",1,companies,epistemic
+Apple engages in the provision of banking and related financial services.,0,companies,epistemic
+Roche Holding has headquarters in Switzerland.,1,companies,epistemic
+Target has headquarters in United States.,1,companies,epistemic
+Berkshire Hathaway has headquarters in United States.,1,companies,epistemic
+JPMorgan Chase operates as a holding company that engages in the management of its group companies.,0,companies,epistemic
+British American Tobacco British American Tobacco Acts as a financing subsidiary/special purpose entity.,1,companies,epistemic
+Apple has headquarters in United States.,1,companies,epistemic
+Ping An Insurance (Group) Company of China provides commercial banking and financial services.,0,companies,epistemic
+"Cigna Corporation is a medical technology company, which engages in the development, manufacture, distribution, and sale of device-based medical therapies and services.",0,companies,epistemic
+"Mitsubishi UFJ Financial Group operates as a holding company, which provides financial services through its subsidiaries.",1,companies,epistemic
+Prudential Financial has headquarters in United States.,1,companies,epistemic
+United Parcel Service has headquarters in Japan.,0,companies,epistemic
+Raytheon Technologies has headquarters in United States.,1,companies,epistemic
+Public Joint Stock Company Gazprom operates in the industry of Insurance.,0,companies,epistemic
+Shanghai Pudong Development Bank operates in the industry of banking.,1,companies,epistemic
+HCA Healthcare has headquarters in United States.,1,companies,epistemic
+Hyundai Motor operates in the industry of Technology.,0,companies,epistemic
+Medtronic operates in the industry of Banking.,0,companies,epistemic
+"Hon Hai Precision is a holding company, which engages in the development, manufacture, and marketing of healthcare products.",0,companies,epistemic
+"Petrobras engages in oil and gas exploration, production, and distribution activities.",1,companies,epistemic
+Generali Group has headquarters in Switzerland.,0,companies,epistemic
+Toronto-Dominion Bank has headquarters in Canada.,1,companies,epistemic
+Poly Developments & Holdings Group operates as a holding company that engages in the provision of insurance and asset management services.,0,companies,epistemic
+MetLife has headquarters in Australia.,0,companies,epistemic
+Hon Hai Precision operates in the industry of technology hardware & equipment.,1,companies,epistemic
+ConocoPhillips engages in the provision of banking and financial services.,0,companies,epistemic
+Univlever has headquarters in Japan.,0,companies,epistemic
+"Iberdrola is a holding company that engages in the generation, distribution, trading and marketing of electricity.",1,companies,epistemic
+Eighty-six is larger than seventy-three.,1,larger_than,epistemic
+Fifty-two is larger than sixty-five.,0,larger_than,epistemic
+Fifty-eight is larger than ninety-nine.,0,larger_than,epistemic
+Ninety-three is larger than sixty-one.,1,larger_than,epistemic
+Ninety-four is larger than sixty-six.,1,larger_than,epistemic
+Ninety-five is larger than eighty-seven.,1,larger_than,epistemic
+Sixty-two is larger than seventy-eight.,0,larger_than,epistemic
+Sixty-one is larger than seventy-two.,0,larger_than,epistemic
+Ninety-two is larger than seventy-eight.,1,larger_than,epistemic
+Fifty-two is larger than seventy-nine.,0,larger_than,epistemic
+Seventy-eight is larger than sixty-eight.,1,larger_than,epistemic
+Seventy-seven is larger than sixty-nine.,1,larger_than,epistemic
+Eighty-five is larger than sixty-seven.,1,larger_than,epistemic
+Fifty-six is larger than eighty-two.,0,larger_than,epistemic
+Ninety-three is larger than seventy-five.,1,larger_than,epistemic
+Eighty-seven is larger than fifty-five.,1,larger_than,epistemic
+Eighty-three is larger than ninety-eight.,0,larger_than,epistemic
+Seventy-eight is larger than fifty-eight.,1,larger_than,epistemic
+Seventy-five is larger than sixty-eight.,1,larger_than,epistemic
+Sixty-five is larger than sixty-two.,1,larger_than,epistemic
+Sixty-one is larger than ninety-two.,0,larger_than,epistemic
+Sixty-two is larger than seventy-six.,0,larger_than,epistemic
+Eighty-three is larger than eighty-six.,0,larger_than,epistemic
+Seventy-nine is larger than sixty-nine.,1,larger_than,epistemic
+Eighty-one is larger than sixty-four.,1,larger_than,epistemic
+Eighty-eight is larger than eighty-one.,1,larger_than,epistemic
+Seventy-one is larger than sixty-nine.,1,larger_than,epistemic
+Eighty-eight is larger than seventy-four.,1,larger_than,epistemic
+Sixty-four is larger than seventy-four.,0,larger_than,epistemic
+Ninety-two is larger than fifty-three.,1,larger_than,epistemic
+Fifty-six is larger than sixty-four.,0,larger_than,epistemic
+Sixty-seven is larger than eighty-eight.,0,larger_than,epistemic
+Eighty-six is larger than eighty-one.,1,larger_than,epistemic
+Eighty-eight is larger than ninety-eight.,0,larger_than,epistemic
+Sixty-nine is larger than eighty-eight.,0,larger_than,epistemic
+Fifty-seven is larger than ninety-seven.,0,larger_than,epistemic
+Seventy-six is larger than eighty-three.,0,larger_than,epistemic
+Sixty-five is larger than fifty-eight.,1,larger_than,epistemic
+Seventy-four is larger than fifty-three.,1,larger_than,epistemic
+Fifty-two is larger than eighty-one.,0,larger_than,epistemic
+Fifty-three is larger than ninety-six.,0,larger_than,epistemic
+Eighty-nine is larger than fifty-seven.,1,larger_than,epistemic
+Ninety-nine is larger than fifty-seven.,1,larger_than,epistemic
+Eighty-one is larger than seventy-six.,1,larger_than,epistemic
+Eighty-five is larger than sixty-eight.,1,larger_than,epistemic
+Seventy-four is larger than sixty-four.,1,larger_than,epistemic
+Ninety-nine is larger than ninety-one.,1,larger_than,epistemic
+Eighty-two is larger than ninety-eight.,0,larger_than,epistemic
+Seventy-nine is larger than eighty-one.,0,larger_than,epistemic
+Fifty-seven is larger than ninety-nine.,0,larger_than,epistemic
+Eighty-three is larger than fifty-five.,1,larger_than,epistemic
+Ninety-five is larger than seventy-nine.,1,larger_than,epistemic
+Seventy-nine is larger than ninety-three.,0,larger_than,epistemic
+Ninety-one is larger than ninety-five.,0,larger_than,epistemic
+Seventy-four is larger than seventy-one.,1,larger_than,epistemic
+Seventy-four is larger than seventy-nine.,0,larger_than,epistemic
+Sixty-six is larger than fifty-three.,1,larger_than,epistemic
+Ninety-seven is larger than fifty-two.,1,larger_than,epistemic
+Eighty-seven is larger than fifty-seven.,1,larger_than,epistemic
+Seventy-one is larger than eighty-one.,0,larger_than,epistemic
+Fifty-nine is larger than fifty-three.,1,larger_than,epistemic
+Seventy-five is larger than eighty-six.,0,larger_than,epistemic
+Fifty-seven is larger than sixty-four.,0,larger_than,epistemic
+Sixty-nine is larger than eighty-seven.,0,larger_than,epistemic
+Fifty-nine is larger than fifty-two.,1,larger_than,epistemic
+Sixty-four is larger than ninety-eight.,0,larger_than,epistemic
+Seventy-six is larger than ninety-nine.,0,larger_than,epistemic
+Fifty-six is larger than eighty-six.,0,larger_than,epistemic
+Fifty-five is larger than ninety-two.,0,larger_than,epistemic
+Seventy-six is larger than sixty-three.,1,larger_than,epistemic
+Seventy-two is larger than ninety-nine.,0,larger_than,epistemic
+Eighty-six is larger than sixty-one.,1,larger_than,epistemic
+Sixty-four is larger than eighty-eight.,0,larger_than,epistemic
+Sixty-nine is larger than ninety-three.,0,larger_than,epistemic
+Seventy-two is larger than eighty-one.,0,larger_than,epistemic
+Sixty-eight is larger than seventy-two.,0,larger_than,epistemic
+Fifty-three is larger than seventy-seven.,0,larger_than,epistemic
+Ninety-five is larger than seventy-four.,1,larger_than,epistemic
+Fifty-five is larger than eighty-nine.,0,larger_than,epistemic
+Sixty-eight is larger than sixty-three.,1,larger_than,epistemic
+Ninety-one is larger than sixty-one.,1,larger_than,epistemic
+Sixty-eight is larger than ninety-three.,0,larger_than,epistemic
+Fifty-three is larger than sixty-four.,0,larger_than,epistemic
+Sixty-two is larger than sixty-six.,0,larger_than,epistemic
+Sixty-seven is larger than seventy-four.,0,larger_than,epistemic
+Sixty-five is larger than ninety-four.,0,larger_than,epistemic
+Eighty-nine is larger than fifty-nine.,1,larger_than,epistemic
+Ninety-two is larger than sixty-eight.,1,larger_than,epistemic
+Eighty-eight is larger than fifty-three.,1,larger_than,epistemic
+Eighty-six is larger than sixty-two.,1,larger_than,epistemic
+Ninety-eight is larger than seventy-five.,1,larger_than,epistemic
+Ninety-six is larger than seventy-nine.,1,larger_than,epistemic
+Seventy-five is larger than fifty-one.,1,larger_than,epistemic
+Eighty-four is larger than eighty-seven.,0,larger_than,epistemic
+Fifty-seven is larger than fifty-eight.,0,larger_than,epistemic
+Fifty-seven is larger than seventy-nine.,0,larger_than,epistemic
+Ninety-four is larger than seventy-two.,1,larger_than,epistemic
+Seventy-six is larger than seventy-eight.,0,larger_than,epistemic
+Fifty-nine is larger than sixty-seven.,0,larger_than,epistemic
+Fifty-six is larger than fifty-one.,1,larger_than,epistemic
+Seventy-three is larger than sixty-one.,1,larger_than,epistemic
+Sixty-four is larger than fifty-eight.,1,larger_than,epistemic
+Fifty-nine is larger than fifty-one.,1,larger_than,epistemic
+Eighty-two is larger than seventy-nine.,1,larger_than,epistemic
+Seventy-three is larger than fifty-two.,1,larger_than,epistemic
+Ninety-five is larger than sixty-nine.,1,larger_than,epistemic
+Eighty-six is larger than ninety-five.,0,larger_than,epistemic
+Ninety-four is larger than ninety-three.,1,larger_than,epistemic
+Fifty-two is larger than seventy-five.,0,larger_than,epistemic
+Ninety-seven is larger than fifty-nine.,1,larger_than,epistemic
+Seventy-seven is larger than seventy-five.,1,larger_than,epistemic
+Sixty-four is larger than seventy-eight.,0,larger_than,epistemic
+Ninety-seven is larger than fifty-five.,1,larger_than,epistemic
+Seventy-three is larger than sixty-four.,1,larger_than,epistemic
+Fifty-one is larger than eighty-four.,0,larger_than,epistemic
+Seventy-one is larger than seventy-five.,0,larger_than,epistemic
+Fifty-eight is larger than ninety-eight.,0,larger_than,epistemic
+Fifty-six is larger than seventy-three.,0,larger_than,epistemic
+Eighty-seven is larger than eighty-two.,1,larger_than,epistemic
+Ninety-two is larger than seventy-five.,1,larger_than,epistemic
+Seventy-two is larger than fifty-one.,1,larger_than,epistemic
+Seventy-four is larger than ninety-four.,0,larger_than,epistemic
+Ninety-two is larger than ninety-eight.,0,larger_than,epistemic
+Fifty-eight is larger than sixty-one.,0,larger_than,epistemic
+Eighty-three is larger than seventy-five.,1,larger_than,epistemic
+Eighty-five is larger than fifty-three.,1,larger_than,epistemic
+Fifty-nine is larger than sixty-nine.,0,larger_than,epistemic
+Ninety-five is larger than ninety-seven.,0,larger_than,epistemic
+Seventy-five is larger than ninety-three.,0,larger_than,epistemic
+Fifty-nine is larger than seventy-six.,0,larger_than,epistemic
+Eighty-two is larger than sixty-four.,1,larger_than,epistemic
+Eighty-nine is larger than sixty-two.,1,larger_than,epistemic
+Fifty-three is larger than eighty-seven.,0,larger_than,epistemic
+Eighty-four is larger than sixty-six.,1,larger_than,epistemic
+Eighty-four is larger than ninety-one.,0,larger_than,epistemic
+Ninety-seven is larger than sixty-nine.,1,larger_than,epistemic
+Ninety-three is larger than fifty-nine.,1,larger_than,epistemic
+Fifty-four is larger than fifty-five.,0,larger_than,epistemic
+Sixty-four is larger than sixty-two.,1,larger_than,epistemic
+Ninety-one is larger than fifty-eight.,1,larger_than,epistemic
+Sixty-nine is larger than seventy-seven.,0,larger_than,epistemic
+Ninety-three is larger than fifty-four.,1,larger_than,epistemic
+Eighty-four is larger than sixty-five.,1,larger_than,epistemic
+Seventy-one is larger than seventy-two.,0,larger_than,epistemic
+Fifty-three is larger than seventy-five.,0,larger_than,epistemic
+Sixty-three is larger than eighty-nine.,0,larger_than,epistemic
+Ninety-four is larger than eighty-two.,1,larger_than,epistemic
+Ninety-nine is larger than eighty-nine.,1,larger_than,epistemic
+Fifty-nine is larger than eighty-five.,0,larger_than,epistemic
+Sixty-six is larger than sixty-four.,1,larger_than,epistemic
+Seventy-six is larger than ninety-four.,0,larger_than,epistemic
+Sixty-eight is larger than seventy-seven.,0,larger_than,epistemic
+Ninety-one is larger than fifty-nine.,1,larger_than,epistemic
+Seventy-eight is larger than fifty-six.,1,larger_than,epistemic
+Eighty-five is larger than sixty-four.,1,larger_than,epistemic
+Sixty-five is larger than fifty-five.,1,larger_than,epistemic
+Ninety-two is larger than ninety-five.,0,larger_than,epistemic
+Seventy-six is larger than sixty-seven.,1,larger_than,epistemic
+Sixty-nine is larger than fifty-nine.,1,larger_than,epistemic
+Sixty-four is larger than sixty-eight.,0,larger_than,epistemic
+Ninety-two is larger than eighty-three.,1,larger_than,epistemic
+Sixty-one is larger than seventy-four.,0,larger_than,epistemic
+Ninety-seven is larger than seventy-one.,1,larger_than,epistemic
+Sixty-nine is larger than ninety-five.,0,larger_than,epistemic
+Ninety-five is larger than ninety-eight.,0,larger_than,epistemic
+Sixty-two is larger than ninety-six.,0,larger_than,epistemic
+Ninety-nine is larger than eighty-eight.,1,larger_than,epistemic
+Sixty-three is larger than eighty-five.,0,larger_than,epistemic
+Seventy-four is larger than sixty-six.,1,larger_than,epistemic
+Ninety-seven is larger than seventy-two.,1,larger_than,epistemic
+Eighty-eight is larger than seventy-eight.,1,larger_than,epistemic
+Fifty-two is larger than fifty-seven.,0,larger_than,epistemic
+Eighty-two is larger than ninety-three.,0,larger_than,epistemic
+Fifty-nine is larger than sixty-eight.,0,larger_than,epistemic
+Sixty-seven is larger than sixty-six.,1,larger_than,epistemic
+Sixty-six is larger than sixty-seven.,0,larger_than,epistemic
+Eighty-five is larger than fifty-one.,1,larger_than,epistemic
+Sixty-five is larger than sixty-three.,1,larger_than,epistemic
+Sixty-one is larger than ninety-eight.,0,larger_than,epistemic
+Ninety-eight is larger than sixty-three.,1,larger_than,epistemic
+Fifty-nine is larger than ninety-seven.,0,larger_than,epistemic
+Fifty-five is larger than ninety-one.,0,larger_than,epistemic
+Fifty-six is larger than ninety-two.,0,larger_than,epistemic
+Eighty-one is larger than eighty-nine.,0,larger_than,epistemic
+Eighty-eight is larger than fifty-two.,1,larger_than,epistemic
+Fifty-one is larger than seventy-seven.,0,larger_than,epistemic
+Sixty-nine is larger than sixty-three.,1,larger_than,epistemic
+Fifty-two is larger than seventy-three.,0,larger_than,epistemic
+Sixty-two is larger than sixty-three.,0,larger_than,epistemic
+Fifty-five is larger than sixty-five.,0,larger_than,epistemic
+Eighty-four is larger than sixty-seven.,1,larger_than,epistemic
+Eighty-six is larger than eighty-seven.,0,larger_than,epistemic
+Seventy-eight is larger than seventy-nine.,0,larger_than,epistemic
+Eighty-nine is larger than eighty-seven.,1,larger_than,epistemic
+Eighty-three is larger than ninety-five.,0,larger_than,epistemic
+Seventy-eight is larger than eighty-nine.,0,larger_than,epistemic
+Seventy-nine is larger than sixty-seven.,1,larger_than,epistemic
+Fifty-five is larger than seventy-four.,0,larger_than,epistemic
+Sixty-one is larger than ninety-nine.,0,larger_than,epistemic
+Sixty-four is larger than ninety-five.,0,larger_than,epistemic

@@ -1,0 +1,64 @@
+\section{Methodology}
+\label{sec:methodology}
+
+We probe residual stream activations across every layer of four GPT-2 models to test whether epistemic and non-epistemic beliefs are encoded differently. Our approach follows the mass-mean probing framework of \citet{marks2023geometry}, extended with control tasks \citep{hewitt2019designing} and cross-dataset transfer analysis.
+
+\subsection{Models}
+\label{sec:models}
+
+We use the GPT-2 model family \citep{radford2019language}, which provides a controlled scaling analysis within a single architecture. \tabref{tab:models} summarizes the four models.
+
+\begin{table}[h]
+\centering
+\caption{GPT-2 models used in our experiments. All models share the same decoder-only transformer architecture and differ only in scale.}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{Parameters} & \textbf{Layers} & \textbf{Hidden Dim} \\
+\midrule
+\gptsmall  & 117M & 12 & 768 \\
+\gptmedium & 345M & 24 & 1024 \\
+\gptlarge  & 774M & 36 & 1280 \\
+\gptxl     & 1.5B & 48 & 1600 \\
+\bottomrule
+\end{tabular}
+\label{tab:models}
+\end{table}
+
+\subsection{Datasets}
+\label{sec:datasets}
+
+We construct three dataset categories to probe different aspects of belief encoding.
+
+\para{Epistemic (factual) statements.}
+We use the \geomtruth dataset \citep{marks2023geometry}, which contains true/false factual statements across five domains: geographic facts (\cities, 200 samples), general factual claims (\commonclaims, 200), corporate facts (\companies, 200), numerical comparisons (\largerthan, 200), and language translation facts (\translations, 200). The combined dataset contains 1,000 statements with balanced labels (499 true, 501 false). Each statement is a simple declarative sentence, \eg ``The city of Krasnodar is in Russia'' (true) or ``The city of Krasnodar is in South Africa'' (false).
+
+\para{Non-epistemic (opinion) statements.}
+We curate 120 non-epistemic statements covering aesthetic judgments, ethical positions, and cultural preferences. These are labeled as commonly-held (60 samples) or uncommon (60 samples). Examples include ``Most people find sunsets to be beautiful'' (commonly-held) and ``Most people prefer cold weather over warm weather'' (uncommon). This dataset captures subjective beliefs that do not have evidence-based truth values.
+
+\para{Type classification.}
+We combine 120 epistemic and 120 non-epistemic statements into a balanced binary classification dataset (epistemic=1, non-epistemic=0) to test whether models distinguish between the two belief types regardless of their truth or agreement value.
+
+\subsection{Activation Extraction}
+\label{sec:extraction}
+
+For each model and statement, we tokenize the input (maximum sequence length 128) and perform a forward pass with \texttt{output\_hidden\_states=True}. We extract residual stream activations at the last non-padding token position for every layer, following the convention for decoder-only models \citep{marks2023geometry,bortoletto2024brittle}. All activations are computed in FP16 precision with batch size 64 on NVIDIA RTX 3090 GPUs.
+
+\subsection{Probing Methods}
+\label{sec:probing}
+
+\para{Mass-mean probing.}
+Given activations $\{\vx_i, y_i\}_{i=1}^{N}$ at a specific layer, where $\vx_i \in \sR^d$ is the activation vector and $y_i \in \{0, 1\}$ is the label, we compute the class means $\vmu_0 = \frac{1}{|C_0|}\sum_{i \in C_0} \vx_i$ and $\vmu_1 = \frac{1}{|C_1|}\sum_{i \in C_1} \vx_i$, where $C_k = \{i : y_i = k\}$. Classification is performed by projecting test activations onto the difference-of-means direction $\vd = \vmu_1 - \vmu_0$ and comparing to the midpoint threshold. This method is optimization-free, avoiding overfitting concerns on small datasets, and \citet{marks2023geometry} showed it produces the most causally implicated probing direction.
+
+\para{Logistic regression.}
+As a validation baseline, we train $L_2$-regularized logistic regression probes (liblinear solver) at sampled layers. This standard linear probe \citep{alain2016understanding} confirms that mass-mean probing results are not artifacts of the simplified classification rule.
+
+\para{Control tasks.}
+Following \citet{hewitt2019designing}, we train probes with randomly permuted labels at sampled layers. The \emph{selectivity} score is defined as the difference between true-label accuracy and random-label accuracy. A high selectivity score ($> 0.10$) indicates that the probe captures genuine encoded information rather than memorizing arbitrary label assignments.
+
+\subsection{Experimental Protocol}
+\label{sec:protocol}
+
+All probing experiments use 5-fold stratified cross-validation. For each fold, we compute the mass-mean direction on the training set and evaluate classification accuracy on the held-out fold. We report the mean accuracy across folds for each layer. We also conduct cross-dataset transfer experiments: we compute the mass-mean direction from one epistemic domain (\eg \cities) and evaluate it on a different domain (\eg \companies) to test the generality of truth representations.
+
+\para{Statistical analysis.}
+We compare the layer-wise accuracy profiles between epistemic and non-epistemic probing using paired $t$-tests across layers, with Cohen's $d$ for effect size. To compare peak layer positions across model scales, we normalize layer indices to $[0, 1]$ by dividing by the total number of layers.

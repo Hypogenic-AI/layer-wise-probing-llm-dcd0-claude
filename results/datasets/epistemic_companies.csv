@@ -1,0 +1,201 @@
+statement,label,source,belief_type
+Pfizer operates in the industry of Insurance.,0,companies,epistemic
+Berkshire Hathaway has headquarters in China.,0,companies,epistemic
+Amazon.com operates in the industry of retailing.,1,companies,epistemic
+Glencore operates in the industry of Telecommunications Services.,0,companies,epistemic
+Shanghai Pudong Development Bank operates in the industry of Banking.,0,companies,epistemic
+"China Citic Bank is a commercial bank, which engages in the provision of corporate and personal banking services.",1,companies,epistemic
+Hon Hai Precision has headquarters in United States.,0,companies,epistemic
+American International Group operates in the industry of Insurance.,0,companies,epistemic
+Barclays operates in the industry of banking.,1,companies,epistemic
+Bristol Myers Squibb operates in the industry of drugs & biotechnology.,1,companies,epistemic
+China Shenhua Energy operates in the industry of materials.,1,companies,epistemic
+Petrobras has headquarters in Brazil.,1,companies,epistemic
+ENGIE engages in the provision of banking and financial services.,0,companies,epistemic
+"GlaxoSmithKline is a healthcare company that engages in the research, development and manufacture of pharmaceutical medicines, vaccines and consumer healthcare products.",1,companies,epistemic
+"UnitedHealth Group engages in the provision of healthcare coverage, software and data consultancy services.",1,companies,epistemic
+Exxon Mobil operates in the industry of Household & Personal Products.,0,companies,epistemic
+China Telecom operates in the industry of telecommunications services.,1,companies,epistemic
+Tokio Marine Holdings operates in the industry of insurance.,1,companies,epistemic
+Walmart is a holding company that engages in the provision of telecommunications media and technology service.,0,companies,epistemic
+State Bank of India operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Microsoft has headquarters in United States.,1,companies,epistemic
+Abbott Laboratories operates in the industry of healthcare equipment & services.,1,companies,epistemic
+Meta Platforms has headquarters in Hong Kong.,0,companies,epistemic
+"Eni is a global technology company, which designs, develops and supplies semiconductor and infrastructure software solutions.",0,companies,epistemic
+Dow has headquarters in United States.,1,companies,epistemic
+Moller - Maersk has headquarters in Australia.,0,companies,epistemic
+AXA operates in the industry of Semiconductors.,0,companies,epistemic
+Total operates in the industry of oil & gas operations.,1,companies,epistemic
+Visa operates in the industry of business services & supplies.,1,companies,epistemic
+Hyundai Motor has headquarters in China.,0,companies,epistemic
+Linde operates in the industry of Construction.,0,companies,epistemic
+Sanofi operates in the industry of drugs & biotechnology.,1,companies,epistemic
+Mitsui operates in the industry of trading companies.,1,companies,epistemic
+Walt Disney operates in the industry of media.,1,companies,epistemic
+BlackRock has headquarters in United States.,1,companies,epistemic
+FedEx is a holding company that engages in the provision of telecommunications media and technology service.,0,companies,epistemic
+Lockheed Martin operates in the industry of aerospace & defense.,1,companies,epistemic
+"PepsiCo operates in the industry of food, drink & tobacco.",1,companies,epistemic
+"Wells Fargo is a diversified, community-based financial services company.",1,companies,epistemic
+Lowe's engages in the retail sale of home improvement products.,1,companies,epistemic
+Mercedes-Benz Group operates as an integrated oil and gas company.,0,companies,epistemic
+Alibaba Group engages in providing online and mobile marketplaces in retail and wholesale trade.,1,companies,epistemic
+Westpac Banking operates in the industry of banking.,1,companies,epistemic
+"Siemens engages in property development, commodity residential building distribution, and property management.",0,companies,epistemic
+Lloyds Banking Group has headquarters in United Kingdom.,1,companies,epistemic
+Alibaba Group operates in the industry of Construction.,0,companies,epistemic
+BASF is a financial holding company. It provides financial and investment banking services.,0,companies,epistemic
+KDDI operates in the industry of Materials.,0,companies,epistemic
+VINCI operates in the industry of construction.,1,companies,epistemic
+Verizon Communications has headquarters in United States.,1,companies,epistemic
+State Bank of India has headquarters in India.,1,companies,epistemic
+LukOil operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Costco Wholesale engages in the operation of membership warehouses.,1,companies,epistemic
+Sony operates in the industry of Banking.,0,companies,epistemic
+Visa has headquarters in Switzerland.,0,companies,epistemic
+China Telecom has headquarters in Germany.,0,companies,epistemic
+"AIA Group engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+Manulife is a financial services company that engages in the provision of financial protection and wealth management products and services.,1,companies,epistemic
+Agricultural Bank of China engages in the provision of international commercial banking and financial services.,1,companies,epistemic
+"HSBC Holdings is a health care services company, which engages in operating hospitals, freestanding surgery centers and emergency rooms, and urgent care centers.",0,companies,epistemic
+"Chevron engages in the provision of administrative, financial management and technology support for energy and chemical operations.",1,companies,epistemic
+Ping An Insurance (Group) Company of China has headquarters in France.,0,companies,epistemic
+Pfizer has headquarters in United States.,1,companies,epistemic
+PetroChina engages in the provision of innovative memory and storage solutions.,0,companies,epistemic
+Industrial Bank has headquarters in China.,1,companies,epistemic
+Broadcom has headquarters in United Kingdom.,0,companies,epistemic
+Brookfield Asset Management has headquarters in United States.,0,companies,epistemic
+PetroChina operates in the industry of Insurance.,0,companies,epistemic
+Bristol Myers Squibb has headquarters in China.,0,companies,epistemic
+Intesa Sanpaolo operates in the industry of Trading Companies.,0,companies,epistemic
+SAP operates in the industry of it software & services.,1,companies,epistemic
+Procter & Gamble engages in the provision of branded consumer packaged goods.,1,companies,epistemic
+Samsung Group engages in the manufacturing and selling of electronics and computer peripherals.,1,companies,epistemic
+Wells Fargo operates in the industry of banking.,1,companies,epistemic
+UnitedHealth Group has headquarters in United States.,1,companies,epistemic
+Linde has headquarters in United States.,0,companies,epistemic
+MetLife has headquarters in United States.,1,companies,epistemic
+Capital One has headquarters in India.,0,companies,epistemic
+"China Construction Bank engages in the research, production and distribution of pharmaceutical products.",0,companies,epistemic
+Sanofi has headquarters in United States.,0,companies,epistemic
+"Bank of Communications engages in the provision of electricity, natural gas, and energy related services.",0,companies,epistemic
+Nippon Telegraph & Telephone engages in the provision of banking and financial services.,0,companies,epistemic
+Mercedes-Benz Group operates in the industry of Aerospace & Defense.,0,companies,epistemic
+Prudential Financial operates in the industry of diversified financials.,1,companies,epistemic
+Reliance Industries provides banking and financial services to individuals and institutions.,0,companies,epistemic
+"Saudi Arabian Oil Company (Saudi Aramco) engages in the exploration, production, transportation, and sale of crude oil and natural gas.",1,companies,epistemic
+China Petroleum & Chemical operates in the industry of oil & gas operations.,1,companies,epistemic
+AT&T engages in business of product trading and business investment activities.,0,companies,epistemic
+Charter Communications has headquarters in Canada.,0,companies,epistemic
+Hitachi engages in the provision of services utilizing the function of general trading.,0,companies,epistemic
+SK Hynix has headquarters in South Korea.,1,companies,epistemic
+"ENGIE engages in the provision of electricity, natural gas, and energy related services.",1,companies,epistemic
+Univlever engages in the provision of banking and financial solutions.,0,companies,epistemic
+MetLife operates in the industry of insurance.,1,companies,epistemic
+China Petroleum & Chemical operates in the industry of Oil & Gas Operations.,0,companies,epistemic
+Iberdrola has headquarters in Spain.,1,companies,epistemic
+Chevron engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+"ConocoPhillips engages in the exploration, production, transportation and marketing of crude oil, bitumen, natural gas, natural gas liquids and liquefied natural gas on a worldwide basis.",1,companies,epistemic
+Hyundai Motor has headquarters in South Korea.,1,companies,epistemic
+Mercedes-Benz Group has headquarters in Germany.,1,companies,epistemic
+Sony has headquarters in Japan.,1,companies,epistemic
+"Charter Communications engages in the provision of financial products and services, including personal, commercial, corporate, and investment banking.",0,companies,epistemic
+"Intel is a holding company, which engages in steelmaking and mining activities.",0,companies,epistemic
+Shell operates in the industry of oil & gas operations.,1,companies,epistemic
+Electricite de France has headquarters in Russia.,0,companies,epistemic
+Anglo American operates in the industry of Construction.,0,companies,epistemic
+"ING Group engages in the provision of banking, investments, life and non-life insurance, and retirement and asset management services.",1,companies,epistemic
+RBC operates in the industry of Insurance.,0,companies,epistemic
+Rosneft operates in the industry of oil & gas operations.,1,companies,epistemic
+Taiwan Semiconductor Manufacturing Company has headquarters in China.,0,companies,epistemic
+Saudi Arabian Oil Company (Saudi Aramco) operates in the industry of Trading Companies.,0,companies,epistemic
+MetLife operates in the industry of Consumer Durables.,0,companies,epistemic
+"Ford Motor engages in the manufacture, distribution and sale of automobiles.",1,companies,epistemic
+Stellantis engages in distribution of natural gas and energy related services.,0,companies,epistemic
+SoftBank engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+Japan Post Holdings has headquarters in Japan.,1,companies,epistemic
+Dow has headquarters in Italy.,0,companies,epistemic
+BNP Paribas engages in the provision of banking and financial services.,1,companies,epistemic
+Generali Group operates in the industry of insurance.,1,companies,epistemic
+LVMH Moet Hennessy Louis Vuitton operates in the industry of household & personal products.,1,companies,epistemic
+"China State Construction Engineering engages in the following business activities: housing construction, real estate development and investment, infrastructure construction and investment, prospecting and design, and overseas industries.",1,companies,epistemic
+China Mobile has headquarters in Hong Kong.,1,companies,epistemic
+America Movil operates in the industry of Consumer Durables.,0,companies,epistemic
+"Bank of Montreal engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+Fubon Financial has headquarters in Taiwan.,1,companies,epistemic
+"Sanofi engages in the research, production and distribution of pharmaceutical products.",1,companies,epistemic
+China Construction Bank has headquarters in United States.,0,companies,epistemic
+Tencent Holdings has headquarters in China.,1,companies,epistemic
+Apple has headquarters in Canada.,0,companies,epistemic
+AIA Group operates in the industry of insurance.,1,companies,epistemic
+Toyota Motor has headquarters in United States.,0,companies,epistemic
+"Canadian Imperial Bank of Commerce is a financial institution, which engages in the provision of banking and wealth management services.",1,companies,epistemic
+Banco Bradesco engages in the provision of financial and insurance services.,1,companies,epistemic
+Eni has headquarters in Switzerland.,0,companies,epistemic
+"BBVA is a banking services company, which engages in the provision of banking services to individuals, companies, and institutions.",0,companies,epistemic
+Honeywell has headquarters in Taiwan.,0,companies,epistemic
+Canadian Imperial Bank of Commerce engages in the provision of banking and financial services.,0,companies,epistemic
+Tencent Holdings operates in the industry of Retailing.,0,companies,epistemic
+Bayerische Motoren Werke (BMW) operates in the industry of Insurance.,0,companies,epistemic
+"Bank of Nova Scotia engages in the provision of financial products and services, including personal, commercial, corporate, and investment banking.",1,companies,epistemic
+"Cisco Systems engages in the design, manufacture, and sale of Internet Protocol based networking products and services related to the communications and information technology industry.",1,companies,epistemic
+China Shenhua Energy has headquarters in Japan.,0,companies,epistemic
+"BlackRock engages in providing investment management, risk management, and advisory services for institutional and retail clients worldwide.",1,companies,epistemic
+"Lockheed Martin operates as a global security and aerospace company, which engages in the research, design, development, manufacture, integration, and sustainment of technology systems, products, and services.",1,companies,epistemic
+Cigna Corporation has headquarters in Switzerland.,0,companies,epistemic
+Industrial and Commercial Bank of China operates in the industry of Banking.,0,companies,epistemic
+Eni operates in the industry of Banking.,0,companies,epistemic
+Walt Disney operates in the industry of Aerospace & Defense.,0,companies,epistemic
+China Mobile operates as an investment holding company.,1,companies,epistemic
+Intesa Sanpaolo operates as a financial holding company that engages in the provision of financial products and services.,0,companies,epistemic
+"Oracle engages in the design, manufacture and sale of computer products and technologies.",0,companies,epistemic
+U.S. Bancorp operates in the industry of banking.,1,companies,epistemic
+Shell has headquarters in Netherlands.,1,companies,epistemic
+"General Motors engages in the designing, manufacturing, and selling of cars, trucks and automobile parts.",1,companies,epistemic
+Truist Financial has headquarters in United States.,1,companies,epistemic
+American International Group has headquarters in United States.,1,companies,epistemic
+Lockheed Martin has headquarters in Ireland.,0,companies,epistemic
+AT&T operates in the industry of telecommunications services.,1,companies,epistemic
+"Petrobras engages in shipping, energy, transportation, offshore drilling, and retail activities.",0,companies,epistemic
+BHP Group operates in the industry of Insurance.,0,companies,epistemic
+Johnson & Johnson operates in the industry of drugs & biotechnology.,1,companies,epistemic
+Danaher engages in the provision of insurance and investment advisory services.,0,companies,epistemic
+BASF operates in the industry of Banking.,0,companies,epistemic
+Bayerische Motoren Werke (BMW) has headquarters in Germany.,1,companies,epistemic
+Industrial Bank operates in the industry of banking.,1,companies,epistemic
+Target has headquarters in Germany.,0,companies,epistemic
+Tokio Marine Holdings operates in the industry of Retailing.,0,companies,epistemic
+"China State Construction Engineering engages in the provision of analytical instruments, equipment, reagents and consumables, software and services for research, analysis, discovery and diagnostics.",0,companies,epistemic
+UBS Group has headquarters in Switzerland.,1,companies,epistemic
+Citigroup has headquarters in United States.,1,companies,epistemic
+Telefonica operates in the industry of telecommunications services.,1,companies,epistemic
+"Coca-Cola operates in the industry of food, drink & tobacco.",1,companies,epistemic
+Apple engages in the provision of banking and related financial services.,0,companies,epistemic
+Roche Holding has headquarters in Switzerland.,1,companies,epistemic
+Target has headquarters in United States.,1,companies,epistemic
+Berkshire Hathaway has headquarters in United States.,1,companies,epistemic
+JPMorgan Chase operates as a holding company that engages in the management of its group companies.,0,companies,epistemic
+British American Tobacco British American Tobacco Acts as a financing subsidiary/special purpose entity.,1,companies,epistemic
+Apple has headquarters in United States.,1,companies,epistemic
+Ping An Insurance (Group) Company of China provides commercial banking and financial services.,0,companies,epistemic
+"Cigna Corporation is a medical technology company, which engages in the development, manufacture, distribution, and sale of device-based medical therapies and services.",0,companies,epistemic
+"Mitsubishi UFJ Financial Group operates as a holding company, which provides financial services through its subsidiaries.",1,companies,epistemic
+Prudential Financial has headquarters in United States.,1,companies,epistemic
+United Parcel Service has headquarters in Japan.,0,companies,epistemic
+Raytheon Technologies has headquarters in United States.,1,companies,epistemic
+Public Joint Stock Company Gazprom operates in the industry of Insurance.,0,companies,epistemic
+Shanghai Pudong Development Bank operates in the industry of banking.,1,companies,epistemic
+HCA Healthcare has headquarters in United States.,1,companies,epistemic
+Hyundai Motor operates in the industry of Technology.,0,companies,epistemic
+Medtronic operates in the industry of Banking.,0,companies,epistemic
+"Hon Hai Precision is a holding company, which engages in the development, manufacture, and marketing of healthcare products.",0,companies,epistemic
+"Petrobras engages in oil and gas exploration, production, and distribution activities.",1,companies,epistemic
+Generali Group has headquarters in Switzerland.,0,companies,epistemic
+Toronto-Dominion Bank has headquarters in Canada.,1,companies,epistemic
+Poly Developments & Holdings Group operates as a holding company that engages in the provision of insurance and asset management services.,0,companies,epistemic
+MetLife has headquarters in Australia.,0,companies,epistemic
+Hon Hai Precision operates in the industry of technology hardware & equipment.,1,companies,epistemic
+ConocoPhillips engages in the provision of banking and financial services.,0,companies,epistemic
+Univlever has headquarters in Japan.,0,companies,epistemic
+"Iberdrola is a holding company that engages in the generation, distribution, trading and marketing of electricity.",1,companies,epistemic

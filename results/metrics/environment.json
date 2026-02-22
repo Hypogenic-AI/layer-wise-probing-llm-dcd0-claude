@@ -1,0 +1,13 @@
+{
+  "python_version": "3.12.2 | packaged by Anaconda, Inc. | (main, Feb 27 2024, 17:35:02) [GCC 11.2.0]",
+  "pytorch_version": "2.10.0+cu128",
+  "transformers_version": "5.2.0",
+  "sklearn_version": "1.8.0",
+  "numpy_version": "2.4.2",
+  "cuda_available": true,
+  "cuda_device_count": 2,
+  "timestamp": "2026-02-21T21:48:34.008153",
+  "seed": 42,
+  "gpu_0": "NVIDIA GeForce RTX 3090",
+  "gpu_1": "NVIDIA GeForce RTX 3090"
+}

@@ -1,0 +1,201 @@
+statement,label,source,belief_type
+The Spanish word 'guardar' means 'to save'.,1,sp_en_trans,epistemic
+The Spanish word 'muy' means 'temperature'.,0,sp_en_trans,epistemic
+The Spanish word 'rosa' means 'rose'.,1,sp_en_trans,epistemic
+The Spanish word 'dinero' means 'mouth'.,0,sp_en_trans,epistemic
+The Spanish word 'cosa' means 'thing'.,1,sp_en_trans,epistemic
+The Spanish word 'mujer' means 'woman'.,1,sp_en_trans,epistemic
+The Spanish word 'querer' means 'of'.,0,sp_en_trans,epistemic
+The Spanish word 'ver' means 'to see'.,1,sp_en_trans,epistemic
+The Spanish word 'azul' means 'eye'.,0,sp_en_trans,epistemic
+The Spanish word 'conejo' means 'rabbit'.,1,sp_en_trans,epistemic
+The Spanish word 'dibujar' means 'to draw'.,1,sp_en_trans,epistemic
+The Spanish word 'cola' means 'name'.,0,sp_en_trans,epistemic
+The Spanish word 'jirafa' means 'giraffe'.,1,sp_en_trans,epistemic
+The Spanish word 'hermana' means 'sister'.,1,sp_en_trans,epistemic
+The Spanish word 'perro' means 'dog'.,1,sp_en_trans,epistemic
+The Spanish word 'pato' means 'shoulder'.,0,sp_en_trans,epistemic
+The Spanish word 'cielo' means 'old'.,0,sp_en_trans,epistemic
+The Spanish word 'sistema' means 'nature'.,0,sp_en_trans,epistemic
+The Spanish word 'rana' means 'frog'.,1,sp_en_trans,epistemic
+The Spanish word 'dientes' means 'hope'.,0,sp_en_trans,epistemic
+The Spanish word 'viento' means 'wind'.,1,sp_en_trans,epistemic
+The Spanish word 'frase' means 'paper'.,0,sp_en_trans,epistemic
+The Spanish word 'piel' means 'skin'.,1,sp_en_trans,epistemic
+The Spanish word 'padre' means 'special'.,0,sp_en_trans,epistemic
+The Spanish word 'volar' means 'to hear'.,0,sp_en_trans,epistemic
+The Spanish word 'miedo' means 'fear'.,1,sp_en_trans,epistemic
+The Spanish word 'poema' means 'to win'.,0,sp_en_trans,epistemic
+The Spanish word 'hombro' means 'shoulder'.,1,sp_en_trans,epistemic
+The Spanish word 'alto' means 'space'.,0,sp_en_trans,epistemic
+The Spanish word 'sol' means 'sun'.,1,sp_en_trans,epistemic
+The Spanish word 'oficina' means 'direct'.,0,sp_en_trans,epistemic
+The Spanish word 'otro' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'calamar' means 'squid'.,1,sp_en_trans,epistemic
+The Spanish word 'prueba' means 'test'.,1,sp_en_trans,epistemic
+The Spanish word 'fuerza' means 'force'.,1,sp_en_trans,epistemic
+The Spanish word 'bueno' means 'good'.,1,sp_en_trans,epistemic
+The Spanish word 'grande' means 'large'.,1,sp_en_trans,epistemic
+The Spanish word 'bosque' means 'forest'.,1,sp_en_trans,epistemic
+The Spanish word 'escuchar' means 'market'.,0,sp_en_trans,epistemic
+The Spanish word 'llevar' means 'end'.,0,sp_en_trans,epistemic
+The Spanish word 'sencilla' means 'simple'.,1,sp_en_trans,epistemic
+The Spanish word 'mundo' means 'zebra'.,0,sp_en_trans,epistemic
+The Spanish word 'temporada' means 'insect'.,0,sp_en_trans,epistemic
+The Spanish word 'sonrisa' means 'smile'.,1,sp_en_trans,epistemic
+The Spanish word 'zorro' means 'shell'.,0,sp_en_trans,epistemic
+The Spanish word 'oeste' means 'moment'.,0,sp_en_trans,epistemic
+The Spanish word 'hacer' means 'neck'.,0,sp_en_trans,epistemic
+The Spanish word 'pero' means 'but'.,1,sp_en_trans,epistemic
+The Spanish word 'antes' means 'before'.,1,sp_en_trans,epistemic
+The Spanish word 'hijo' means 'son'.,1,sp_en_trans,epistemic
+The Spanish word 'ala' means 'wing'.,1,sp_en_trans,epistemic
+The Spanish word 'nube' means 'to write'.,0,sp_en_trans,epistemic
+The Spanish word 'resultado' means 'result'.,1,sp_en_trans,epistemic
+The Spanish word 'cruzar' means 'pig'.,0,sp_en_trans,epistemic
+The Spanish word 'cabra' means 'money'.,0,sp_en_trans,epistemic
+The Spanish word 'primavera' means 'wave'.,0,sp_en_trans,epistemic
+The Spanish word 'caliente' means 'hot'.,1,sp_en_trans,epistemic
+The Spanish word 'gobernar' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'nunca' means 'to hear'.,0,sp_en_trans,epistemic
+The Spanish word 'describir' means 'to die'.,0,sp_en_trans,epistemic
+The Spanish word 'primero' means 'first'.,1,sp_en_trans,epistemic
+The Spanish word 'derecho' means 'summer'.,0,sp_en_trans,epistemic
+The Spanish word 'amarillo' means 'land'.,0,sp_en_trans,epistemic
+The Spanish word 'ciudad' means 'city'.,1,sp_en_trans,epistemic
+The Spanish word 'planta' means 'cloud'.,0,sp_en_trans,epistemic
+The Spanish word 'tarde' means 'hand'.,0,sp_en_trans,epistemic
+The Spanish word 'pulpo' means 'slow'.,0,sp_en_trans,epistemic
+The Spanish word 'tienda' means 'insect'.,0,sp_en_trans,epistemic
+The Spanish word 'siete' means 'seven'.,1,sp_en_trans,epistemic
+The Spanish word 'amigo' means 'friend'.,1,sp_en_trans,epistemic
+The Spanish word 'hermano' means 'silver'.,0,sp_en_trans,epistemic
+The Spanish word 'hola' means 'hello'.,1,sp_en_trans,epistemic
+The Spanish word 'suave' means 'skin'.,0,sp_en_trans,epistemic
+The Spanish word 'lobo' means 'leg'.,0,sp_en_trans,epistemic
+The Spanish word 'mapa' means 'map'.,1,sp_en_trans,epistemic
+The Spanish word 'ojo' means 'order'.,0,sp_en_trans,epistemic
+The Spanish word 'bebida' means 'train'.,0,sp_en_trans,epistemic
+The Spanish word 'semana' means 'face'.,0,sp_en_trans,epistemic
+The Spanish word 'aire' means 'silver'.,0,sp_en_trans,epistemic
+The Spanish word 'encontrar' means 'person'.,0,sp_en_trans,epistemic
+The Spanish word 'leche' means 'glass'.,0,sp_en_trans,epistemic
+The Spanish word 'de' means 'now'.,0,sp_en_trans,epistemic
+The Spanish word 'amar' means 'teeth'.,0,sp_en_trans,epistemic
+The Spanish word 'rojo' means 'red'.,1,sp_en_trans,epistemic
+The Spanish word 'continuar' means 'coat'.,0,sp_en_trans,epistemic
+The Spanish word 'ganar' means 'to use'.,0,sp_en_trans,epistemic
+The Spanish word 'lago' means 'month'.,0,sp_en_trans,epistemic
+The Spanish word 'potencia' means 'power'.,1,sp_en_trans,epistemic
+The Spanish word 'segundo' means 'hello'.,0,sp_en_trans,epistemic
+The Spanish word 'estudiante' means 'student'.,1,sp_en_trans,epistemic
+The Spanish word 'persona' means 'person'.,1,sp_en_trans,epistemic
+The Spanish word 'listo' means 'ready'.,1,sp_en_trans,epistemic
+The Spanish word 'caballo' means 'horse'.,1,sp_en_trans,epistemic
+The Spanish word 'suficiente' means 'enough'.,1,sp_en_trans,epistemic
+The Spanish word 'grasa' means 'new'.,0,sp_en_trans,epistemic
+The Spanish word 'nada' means 'nothing'.,1,sp_en_trans,epistemic
+The Spanish word 'jugar' means 'to play'.,1,sp_en_trans,epistemic
+The Spanish word 'pintar' means 'mouth'.,0,sp_en_trans,epistemic
+The Spanish word 'grande' means 'to ask'.,0,sp_en_trans,epistemic
+The Spanish word 'caminar' means 'to walk'.,1,sp_en_trans,epistemic
+The Spanish word 'herramienta' means 'tool'.,1,sp_en_trans,epistemic
+The Spanish word 'sentir' means 'to build'.,0,sp_en_trans,epistemic
+The Spanish word 'experimento' means 'dark'.,0,sp_en_trans,epistemic
+The Spanish word 'ventana' means 'half'.,0,sp_en_trans,epistemic
+The Spanish word 'gato' means 'cat'.,1,sp_en_trans,epistemic
+The Spanish word 'elefante' means 'spring'.,0,sp_en_trans,epistemic
+The Spanish word 'esclavo' means 'slave'.,1,sp_en_trans,epistemic
+The Spanish word 'llano' means 'chair'.,0,sp_en_trans,epistemic
+The Spanish word 'fruta' means 'goat'.,0,sp_en_trans,epistemic
+The Spanish word 'esposa' means 'wife'.,1,sp_en_trans,epistemic
+The Spanish word 'caliente' means 'iron'.,0,sp_en_trans,epistemic
+The Spanish word 'casa' means 'to make'.,0,sp_en_trans,epistemic
+The Spanish word 'barco' means 'hello'.,0,sp_en_trans,epistemic
+The Spanish word 'granja' means 'woman'.,0,sp_en_trans,epistemic
+The Spanish word 'corto' means 'letter'.,0,sp_en_trans,epistemic
+The Spanish word 'poner' means 'whale'.,0,sp_en_trans,epistemic
+The Spanish word 'problema' means 'problem'.,1,sp_en_trans,epistemic
+The Spanish word 'grupo' means 'group'.,1,sp_en_trans,epistemic
+The Spanish word 'agudo' means 'sharp'.,1,sp_en_trans,epistemic
+The Spanish word 'cuerpo' means 'body'.,1,sp_en_trans,epistemic
+The Spanish word 'cerca' means 'dog'.,0,sp_en_trans,epistemic
+The Spanish word 'lugar' means 'place'.,1,sp_en_trans,epistemic
+The Spanish word 'mil' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'seis' means 'to find'.,0,sp_en_trans,epistemic
+The Spanish word 'anillo' means 'to love'.,0,sp_en_trans,epistemic
+The Spanish word 'cocinero' means 'cook'.,1,sp_en_trans,epistemic
+The Spanish word 'oveja' means 'sheep'.,1,sp_en_trans,epistemic
+The Spanish word 'especial' means 'strong'.,0,sp_en_trans,epistemic
+The Spanish word 'venir' means 'to know'.,0,sp_en_trans,epistemic
+The Spanish word 'chica' means 'to eat'.,0,sp_en_trans,epistemic
+The Spanish word 'momento' means 'moment'.,1,sp_en_trans,epistemic
+The Spanish word 'o' means 'octopus'.,0,sp_en_trans,epistemic
+The Spanish word 'gato' means 'large'.,0,sp_en_trans,epistemic
+The Spanish word 'cordero' means 'fat'.,0,sp_en_trans,epistemic
+The Spanish word 'hacer' means 'lost'.,0,sp_en_trans,epistemic
+The Spanish word 'insecto' means 'then'.,0,sp_en_trans,epistemic
+The Spanish word 'temperatura' means 'hand'.,0,sp_en_trans,epistemic
+The Spanish word 'mar' means 'sea'.,1,sp_en_trans,epistemic
+The Spanish word 'quemar' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'soldado' means 'soldier'.,1,sp_en_trans,epistemic
+The Spanish word 'diez' means 'ten'.,1,sp_en_trans,epistemic
+The Spanish word 'lento' means 'slow'.,1,sp_en_trans,epistemic
+The Spanish word 'enviar' means 'to send'.,1,sp_en_trans,epistemic
+The Spanish word 'vaca' means 'cow'.,1,sp_en_trans,epistemic
+The Spanish word 'comer' means 'to eat'.,1,sp_en_trans,epistemic
+The Spanish word 'escuela' means 'school'.,1,sp_en_trans,epistemic
+The Spanish word 'clave' means 'rose'.,0,sp_en_trans,epistemic
+The Spanish word 'cara' means 'name'.,0,sp_en_trans,epistemic
+The Spanish word 'isla' means 'island'.,1,sp_en_trans,epistemic
+The Spanish word 'pan' means 'eye'.,0,sp_en_trans,epistemic
+The Spanish word 'madera' means 'to have'.,0,sp_en_trans,epistemic
+The Spanish word 'famoso' means 'to believe'.,0,sp_en_trans,epistemic
+The Spanish word 'respuesta' means 'bread'.,0,sp_en_trans,epistemic
+The Spanish word 'tierra' means 'land'.,1,sp_en_trans,epistemic
+The Spanish word 'vivir' means 'sheep'.,0,sp_en_trans,epistemic
+The Spanish word 'pie' means 'lake'.,0,sp_en_trans,epistemic
+The Spanish word 'medir' means 'to carry'.,0,sp_en_trans,epistemic
+The Spanish word 'cabeza' means 'head'.,1,sp_en_trans,epistemic
+The Spanish word 'reloj' means 'clock'.,1,sp_en_trans,epistemic
+The Spanish word 'libre' means 'free'.,1,sp_en_trans,epistemic
+The Spanish word 'clase' means 'class'.,1,sp_en_trans,epistemic
+The Spanish word 'ocupado' means 'busy'.,1,sp_en_trans,epistemic
+The Spanish word 'tren' means 'train'.,1,sp_en_trans,epistemic
+The Spanish word 'noche' means 'night'.,1,sp_en_trans,epistemic
+The Spanish word 'concha' means 'shell'.,1,sp_en_trans,epistemic
+The Spanish word 'suelo' means 'ground'.,1,sp_en_trans,epistemic
+The Spanish word 'cuello' means 'neck'.,1,sp_en_trans,epistemic
+The Spanish word 'arena' means 'sand'.,1,sp_en_trans,epistemic
+The Spanish word 'oferta' means 'offer'.,1,sp_en_trans,epistemic
+The Spanish word 'recibir' means 'time'.,0,sp_en_trans,epistemic
+The Spanish word 'seguro' means 'danger'.,0,sp_en_trans,epistemic
+The Spanish word 'piedra' means 'stone'.,1,sp_en_trans,epistemic
+The Spanish word 'piso' means 'set'.,0,sp_en_trans,epistemic
+The Spanish word 'orden' means 'old'.,0,sp_en_trans,epistemic
+The Spanish word 'espalda' means 'back'.,1,sp_en_trans,epistemic
+The Spanish word 'tiempo' means 'market'.,0,sp_en_trans,epistemic
+The Spanish word 'edad' means 'clock'.,0,sp_en_trans,epistemic
+The Spanish word 'delgado' means 'thin'.,1,sp_en_trans,epistemic
+The Spanish word 'joven' means 'hot'.,0,sp_en_trans,epistemic
+The Spanish word 'pagar' means 'to pay'.,1,sp_en_trans,epistemic
+The Spanish word 'elegir' means 'to choose'.,1,sp_en_trans,epistemic
+The Spanish word 'pronto' means 'to die'.,0,sp_en_trans,epistemic
+The Spanish word 'burro' means 'donkey'.,1,sp_en_trans,epistemic
+The Spanish word 'ballena' means 'whale'.,1,sp_en_trans,epistemic
+The Spanish word 'dedo' means 'finger'.,1,sp_en_trans,epistemic
+The Spanish word 'nueve' means 'stone'.,0,sp_en_trans,epistemic
+The Spanish word 'desarrollar' means 'to develop'.,1,sp_en_trans,epistemic
+The Spanish word 'boca' means 'mouth'.,1,sp_en_trans,epistemic
+The Spanish word 'ocho' means 'too'.,0,sp_en_trans,epistemic
+The Spanish word 'calor' means 'dry'.,0,sp_en_trans,epistemic
+The Spanish word 'tarjeta' means 'bear'.,0,sp_en_trans,epistemic
+The Spanish word 'tener' means 'to have'.,1,sp_en_trans,epistemic
+The Spanish word 'lista' means 'list'.,1,sp_en_trans,epistemic
+The Spanish word 'verano' means 'to push'.,0,sp_en_trans,epistemic
+The Spanish word 'pierna' means 'leg'.,1,sp_en_trans,epistemic
+The Spanish word 'comprar' means 'dry'.,0,sp_en_trans,epistemic
+The Spanish word 'familia' means 'family'.,1,sp_en_trans,epistemic
+The Spanish word 'olor' means 'smell'.,1,sp_en_trans,epistemic
+The Spanish word 'vaca' means 'cow'.,1,sp_en_trans,epistemic
+The Spanish word 'nadar' means 'to swim'.,1,sp_en_trans,epistemic

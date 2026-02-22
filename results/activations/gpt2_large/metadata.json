@@ -1,0 +1,72 @@
+{
+  "model": "gpt2-large",
+  "short_name": "gpt2_large",
+  "n_layers": 36,
+  "hidden_dim": 1280,
+  "datasets": {
+    "epistemic_companies": {
+      "n_samples": 200,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        200,
+        1280
+      ]
+    },
+    "type_classification": {
+      "n_samples": 240,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        240,
+        1280
+      ]
+    },
+    "epistemic_sp_en_trans": {
+      "n_samples": 200,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        200,
+        1280
+      ]
+    },
+    "epistemic_cities": {
+      "n_samples": 200,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        200,
+        1280
+      ]
+    },
+    "epistemic_all": {
+      "n_samples": 1000,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        1000,
+        1280
+      ]
+    },
+    "epistemic_larger_than": {
+      "n_samples": 200,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        200,
+        1280
+      ]
+    },
+    "nonepistemic": {
+      "n_samples": 120,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        120,
+        1280
+      ]
+    },
+    "epistemic_common_claims": {
+      "n_samples": 200,
+      "n_layers_saved": 37,
+      "activation_shape": [
+        200,
+        1280
+      ]
+    }
+  }
+}

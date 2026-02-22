@@ -1,0 +1,201 @@
+statement,label,source,belief_type
+The city of Dombivli is in India.,1,cities,epistemic
+The city of Nizhniy Novgorod is in Russia.,1,cities,epistemic
+The city of Dakar is in India.,0,cities,epistemic
+The city of Mbuji-Mayi is in the Democratic Republic of the Congo.,1,cities,epistemic
+The city of Heze is in Yemen.,0,cities,epistemic
+The city of Rio de Janeiro is in Brazil.,1,cities,epistemic
+The city of Bengbu is in China.,1,cities,epistemic
+The city of Minsk is in South Korea.,0,cities,epistemic
+The city of Bucharest is in Romania.,1,cities,epistemic
+The city of Ciudad Juarez is in Mexico.,1,cities,epistemic
+The city of Zhangzhou is in China.,1,cities,epistemic
+The city of Beirut is in Algeria.,0,cities,epistemic
+The city of Luohe is in China.,1,cities,epistemic
+The city of Tangier is in Morocco.,1,cities,epistemic
+The city of Zhabei is in China.,1,cities,epistemic
+The city of Rizhao is in Iraq.,0,cities,epistemic
+The city of Homs is in Syria.,1,cities,epistemic
+The city of Kirkuk is in China.,0,cities,epistemic
+The city of Shanghai is in China.,1,cities,epistemic
+The city of Rohini is in Russia.,0,cities,epistemic
+The city of Penza is in Russia.,1,cities,epistemic
+The city of Reynosa is in China.,0,cities,epistemic
+The city of N'Djamena is in Chad.,1,cities,epistemic
+The city of Omdurman is in Sudan.,1,cities,epistemic
+The city of Weihai is in Russia.,0,cities,epistemic
+The city of Qionghai is in Ecuador.,0,cities,epistemic
+The city of Ipoh is in Malaysia.,1,cities,epistemic
+The city of Copenhagen is in Denmark.,1,cities,epistemic
+The city of Chattogram is in Bangladesh.,1,cities,epistemic
+The city of Feira de Santana is in Brazil.,1,cities,epistemic
+The city of Sevastopol is in Pakistan.,0,cities,epistemic
+The city of Daejeon is in India.,0,cities,epistemic
+The city of Madurai is in Burundi.,0,cities,epistemic
+The city of Herat is in China.,0,cities,epistemic
+The city of Koeln is in Nigeria.,0,cities,epistemic
+The city of Chiclayo is in Peru.,1,cities,epistemic
+The city of Tianshui is in China.,1,cities,epistemic
+The city of New South Memphis is in China.,0,cities,epistemic
+The city of Hamadan is in Pakistan.,0,cities,epistemic
+The city of Guilin is in China.,1,cities,epistemic
+The city of Malang is in Indonesia.,1,cities,epistemic
+The city of Budapest is in Iraq.,0,cities,epistemic
+The city of Foshan is in Mozambique.,0,cities,epistemic
+The city of Navi Mumbai is in India.,1,cities,epistemic
+The city of Jaipur is in India.,1,cities,epistemic
+The city of Mississauga is in Canada.,1,cities,epistemic
+The city of Luancheng is in China.,1,cities,epistemic
+The city of Kimhae is in Senegal.,0,cities,epistemic
+The city of Zahedan is in Iran.,1,cities,epistemic
+The city of Thuan An is in Mozambique.,0,cities,epistemic
+The city of Hamamatsu is in Russia.,0,cities,epistemic
+The city of General Santos is in China.,0,cities,epistemic
+The city of Shantou is in China.,1,cities,epistemic
+The city of Indianapolis is in Côte d'Ivoire.,0,cities,epistemic
+The city of Chizhou is in China.,1,cities,epistemic
+The city of Zaozhuang is in Belarus.,0,cities,epistemic
+The city of Ajmer is in Russia.,0,cities,epistemic
+The city of Jos is in Nigeria.,1,cities,epistemic
+The city of Kampung Baru Subang is in the Philippines.,0,cities,epistemic
+The city of Abeokuta is in Mozambique.,0,cities,epistemic
+The city of Astrakhan is in Russia.,1,cities,epistemic
+The city of Pingliang is in Tanzania.,0,cities,epistemic
+The city of Nagoya is in China.,0,cities,epistemic
+The city of Najafgarh is in Brazil.,0,cities,epistemic
+The city of Lusaka is in Poland.,0,cities,epistemic
+The city of Pune is in South Korea.,0,cities,epistemic
+The city of Xuchang is in Japan.,0,cities,epistemic
+The city of Chuzhou is in China.,1,cities,epistemic
+The city of Bokaro is in India.,1,cities,epistemic
+The city of Buraydah is in Saudi Arabia.,1,cities,epistemic
+The city of Quebec is in Canada.,1,cities,epistemic
+The city of Ludhiana is in India.,1,cities,epistemic
+The city of Zhoushan is in the Philippines.,0,cities,epistemic
+The city of Goeteborg is in Sweden.,1,cities,epistemic
+The city of Laiwu is in the United States.,0,cities,epistemic
+The city of Zhangye is in China.,1,cities,epistemic
+The city of Changde is in China.,1,cities,epistemic
+The city of Durban is in Ukraine.,0,cities,epistemic
+The city of Wanning is in China.,1,cities,epistemic
+The city of Omsk is in China.,0,cities,epistemic
+The city of Gwalior is in China.,0,cities,epistemic
+The city of Panshan is in Japan.,0,cities,epistemic
+The city of Kinshasa is in Brazil.,0,cities,epistemic
+The city of Zhangjiagang is in China.,1,cities,epistemic
+The city of Aparecida de Goiania is in China.,0,cities,epistemic
+The city of Solapur is in the United States.,0,cities,epistemic
+The city of Antananarivo is in Germany.,0,cities,epistemic
+The city of Yibin is in China.,1,cities,epistemic
+The city of Nagoya is in Japan.,1,cities,epistemic
+The city of San Pedro Sula is in Honduras.,1,cities,epistemic
+The city of Guang'an is in China.,1,cities,epistemic
+The city of Weihai is in China.,1,cities,epistemic
+The city of Denpasar is in Brazil.,0,cities,epistemic
+The city of Kotli is in the United States.,0,cities,epistemic
+The city of Kampala is in Uganda.,1,cities,epistemic
+The city of Bangkok is in China.,0,cities,epistemic
+The city of Balikpapan is in Indonesia.,1,cities,epistemic
+The city of Seongnam-si is in Russia.,0,cities,epistemic
+The city of Bloemfontein is in China.,0,cities,epistemic
+The city of Laibin is in Ethiopia.,0,cities,epistemic
+The city of Shaoxing is in the Philippines.,0,cities,epistemic
+The city of Pontianak is in Indonesia.,1,cities,epistemic
+The city of Bikaner is in South Korea.,0,cities,epistemic
+The city of Meizhou is in China.,1,cities,epistemic
+The city of Seattle is in the United States.,1,cities,epistemic
+The city of Nowrangapur is in India.,1,cities,epistemic
+The city of Makati City is in India.,0,cities,epistemic
+The city of Ciudad Nezahualcoyotl is in Mexico.,1,cities,epistemic
+The city of Huaihua is in South Africa.,0,cities,epistemic
+The city of Sao Paulo is in Brazil.,1,cities,epistemic
+The city of Kampala is in Turkey.,0,cities,epistemic
+The city of Zhumadian is in Brazil.,0,cities,epistemic
+The city of Malatya is in Russia.,0,cities,epistemic
+The city of Hengyang is in China.,1,cities,epistemic
+The city of Matsuyama is in Japan.,1,cities,epistemic
+The city of Bouake is in China.,0,cities,epistemic
+The city of Caloocan City is in the Philippines.,1,cities,epistemic
+The city of Maoming is in China.,1,cities,epistemic
+The city of Linyi is in Iraq.,0,cities,epistemic
+The city of Karbala is in Turkey.,0,cities,epistemic
+The city of Taiz is in Yemen.,1,cities,epistemic
+The city of Karol Bagh is in Syria.,0,cities,epistemic
+The city of Comilla is in Bangladesh.,1,cities,epistemic
+The city of Jamshedpur is in China.,0,cities,epistemic
+The city of Basrah is in China.,0,cities,epistemic
+The city of Kyoto is in China.,0,cities,epistemic
+The city of Theni is in India.,1,cities,epistemic
+The city of Quezon City is in China.,0,cities,epistemic
+The city of Ipoh is in Brazil.,0,cities,epistemic
+The city of Santiago de los Caballeros is in India.,0,cities,epistemic
+The city of Yiwu is in India.,0,cities,epistemic
+The city of Chaozhou is in China.,1,cities,epistemic
+The city of Isfahan is in Iran.,1,cities,epistemic
+The city of Sapporo is in Japan.,1,cities,epistemic
+The city of Baise is in Japan.,0,cities,epistemic
+The city of Yongzhou is in Ukraine.,0,cities,epistemic
+The city of Albuquerque is in the United States.,1,cities,epistemic
+The city of Ilorin is in Nigeria.,1,cities,epistemic
+The city of Fes is in Mali.,0,cities,epistemic
+The city of Ranchi is in Venezuela.,0,cities,epistemic
+The city of Coyoacan is in Mexico.,1,cities,epistemic
+The city of Rizhao is in China.,1,cities,epistemic
+The city of Ufa is in Russia.,1,cities,epistemic
+The city of Bursa is in Bosnia and Herzegovina.,0,cities,epistemic
+The city of Zhaotong is in China.,1,cities,epistemic
+The city of Oyo is in Nigeria.,1,cities,epistemic
+The city of Leipzig is in Russia.,0,cities,epistemic
+The city of Yaounde is in China.,0,cities,epistemic
+The city of Budapest is in Hungary.,1,cities,epistemic
+The city of Thuan An is in Vietnam.,1,cities,epistemic
+The city of Nay Pyi Taw is in Mozambique.,0,cities,epistemic
+The city of Wenzhou is in Moldova.,0,cities,epistemic
+The city of Rostov-na-Donu is in the United Arab Emirates.,0,cities,epistemic
+The city of Surat is in India.,1,cities,epistemic
+The city of Suizhou is in Japan.,0,cities,epistemic
+The city of Port-au-Prince is in South Korea.,0,cities,epistemic
+The city of Amman is in Malaysia.,0,cities,epistemic
+The city of Tangerang is in China.,0,cities,epistemic
+The city of Tiruchirappalli is in Iraq.,0,cities,epistemic
+The city of Xianning is in China.,1,cities,epistemic
+The city of Sarajevo is in Bosnia and Herzegovina.,1,cities,epistemic
+The city of Cucuta is in Colombia.,1,cities,epistemic
+The city of Suizhou is in China.,1,cities,epistemic
+The city of Santiago de Queretaro is in Ecuador.,0,cities,epistemic
+The city of Konya is in Russia.,0,cities,epistemic
+The city of Penza is in China.,0,cities,epistemic
+The city of Hebi is in China.,1,cities,epistemic
+The city of Johannesburg is in China.,0,cities,epistemic
+The city of Ahmedabad is in China.,0,cities,epistemic
+The city of Ahmedabad is in India.,1,cities,epistemic
+The city of Teresina is in Vietnam.,0,cities,epistemic
+The city of Kunming is in China.,1,cities,epistemic
+The city of Bloemfontein is in South Africa.,1,cities,epistemic
+The city of Incheon is in South Korea.,1,cities,epistemic
+The city of Dammam is in Russia.,0,cities,epistemic
+The city of Maceio is in Brazil.,1,cities,epistemic
+The city of Shenzhen is in China.,1,cities,epistemic
+The city of Coyoacan is in Kenya.,0,cities,epistemic
+The city of Prayagraj is in India.,1,cities,epistemic
+The city of Jabalpur is in India.,1,cities,epistemic
+The city of Liuzhou is in Russia.,0,cities,epistemic
+The city of Mexico City is in Mexico.,1,cities,epistemic
+The city of Bauchi is in Nigeria.,1,cities,epistemic
+The city of Sangli is in Japan.,0,cities,epistemic
+The city of Ibadan is in Malaysia.,0,cities,epistemic
+The city of Yibin is in Brazil.,0,cities,epistemic
+The city of Goiania is in Brazil.,1,cities,epistemic
+The city of Phnom Penh is in Senegal.,0,cities,epistemic
+The city of Stockholm is in Sweden.,1,cities,epistemic
+The city of Bilimora is in Uzbekistan.,0,cities,epistemic
+The city of Guankou is in Pakistan.,0,cities,epistemic
+The city of Hannover is in China.,0,cities,epistemic
+The city of Yekaterinburg is in Russia.,1,cities,epistemic
+The city of Bijie is in Indonesia.,0,cities,epistemic
+The city of Izmir is in Iran.,0,cities,epistemic
+The city of Ta'if is in Saudi Arabia.,1,cities,epistemic
+The city of Jalandhar is in Iraq.,0,cities,epistemic
+The city of Dnipro is in Russia.,0,cities,epistemic
+The city of Bursa is in Turkey.,1,cities,epistemic
+The city of Abobo is in India.,0,cities,epistemic

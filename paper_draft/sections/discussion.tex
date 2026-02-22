@@ -1,0 +1,38 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Interpretation of Results}
+
+\para{What drives near-perfect type classification?}
+The 99.2--100\% type classification accuracy raises an important question: does this reflect genuine understanding of belief categories, or surface-level linguistic patterns? Epistemic statements in our dataset are simple declarative sentences (``The city of X is in Y''), while non-epistemic statements use hedging language (``Most people believe...'', ``It is generally considered...''). The near-perfect classification may largely reflect these structural differences rather than a deep semantic grasp of what makes a belief epistemic or non-epistemic. However, the high selectivity scores (0.45--0.49) indicate that this is not an artifact of probe memorization---the representations genuinely separate along this dimension, even if the underlying signal may be partly syntactic.
+
+\para{Why are opinions more decodable than truth?}
+Non-epistemic agreement probing (87--95\%) substantially outperforms epistemic truth probing on mixed domains (54--59\%). We suggest two explanations. First, opinion statements contain stronger linguistic markers that correlate with commonly-held status: phrases like ``most people find'' or ``is widely regarded as'' create consistent activation patterns, while truth value is a more abstract property that does not reliably correlate with surface features. Second, \llms are trained on text that reflects human consensus---commonly-held opinions appear more frequently and in more consistent contexts than uncommon ones, creating stronger statistical associations that linear probes can detect. This is consistent with the observation of \citet{marks2023geometry} that their truth probes may capture ``commonly believed'' rather than genuine truth.
+
+\para{Domain specificity of truth representations.}
+The sharp drop from domain-specific (up to 88.5\%) to cross-domain (54--59\%) epistemic truth probing reveals that truth is not represented by a single universal direction in activation space. Instead, each factual domain appears to have its own truth axis. Geographic facts (``X is in Y'') and numerical comparisons (``X is larger than Y'') develop the strongest linear structure, likely because they involve consistent relational patterns. Translation correctness (54.5--58.0\%) and company facts (60.5--63.0\%) show weaker structure, possibly because these domains have less consistent co-occurrence statistics in GPT-2's training data.
+
+\subsection{Limitations}
+
+\para{Dataset construction.}
+Our non-epistemic dataset of 120 manually curated statements may introduce systematic linguistic patterns that make classification artificially easy. Naturally occurring opinion statements---from social media, surveys, or editorial content---would provide a stronger test. Additionally, the small dataset size increases variance in probing estimates, though 5-fold cross-validation partially mitigates this.
+
+\para{Model coverage.}
+We study only the GPT-2 family. More capable architectures (LLaMA, Mistral) may show different patterns, particularly given that \citet{bortoletto2024brittle} found dramatic differences between base and instruction-tuned models. Our findings should be validated on larger, more capable models.
+
+\para{Linear probing.}
+Mass-mean probing and logistic regression test only what is \emph{linearly} accessible in the representation. Non-linear probes (\eg a 1-hidden-layer MLP) might reveal richer belief encoding that our methods miss. However, linear probing is more interpretable and less prone to overfitting, which is important given our small non-epistemic dataset.
+
+\para{Confound between content and structure.}
+Epistemic and non-epistemic statements differ not only in belief type but also in syntactic structure, vocabulary, and topic. Disentangling these confounds would require carefully matched stimuli---for example, epistemic and non-epistemic statements with identical syntactic frames---which we leave to future work.
+
+\subsection{Broader Implications}
+
+\para{Hallucination detection.}
+Our finding that epistemic and non-epistemic statements occupy distinct representational subspaces suggests a two-stage approach to hallucination detection: first classify a model's output by belief type, then apply type-specific verification. For epistemic claims, truth probing could flag potentially inaccurate statements; for non-epistemic claims, the system could flag them as opinions rather than facts.
+
+\para{Targeted belief interventions.}
+The distinct representational subspaces identified by our probes could enable targeted activation steering. \citet{li2023inference} showed that intervening along truthfulness-related directions in attention heads can improve factual accuracy. Our type classification direction could be used to selectively apply such interventions only when the model is producing epistemic content, avoiding distortion of legitimate opinion generation.
+
+\para{Understanding versus pattern matching.}
+The combination of near-perfect type classification with modest truth probing accuracy paints a nuanced picture of what \llms ``understand.'' These models clearly distinguish between how factual claims and opinions are expressed, but they are less adept at encoding whether factual claims are actually true. This suggests that the representational distinction is driven more by distributional properties of text than by genuine epistemological reasoning.

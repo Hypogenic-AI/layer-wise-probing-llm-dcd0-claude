@@ -1,0 +1,966 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at .claude/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. VERIFY COMMAND TEMPLATES: Command templates (math.tex, general.tex, macros.tex) are pre-copied to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# Layer-wise Probing Analysis of Belief Encoding in LLMs
+
+## 1. Executive Summary
+
+This study investigates whether Large Language Models (LLMs) internally differentiate between epistemic beliefs (evidence-based factual claims) and non-epistemic beliefs (opinions, values, preferences) across their internal layers. Using mass-mean probing and logistic regression on residual stream activations from four GPT-2 models (Small to XL), we find three key results:
+
+1. **LLMs strongly differentiate epistemic from non-epistemic beliefs**: Type classification (epistemic vs. non-epistemic) achieves near-perfect accuracy (99.2-100%) from mid-to-upper layers across all model sizes, with high selectivity scores (0.45-0.49) confirming this is genuine encoding rather than probe memorization.
+
+2. **Non-epistemic beliefs are more linearly decodable than epistemic truth**: Probes distinguish commonly-held from uncommon opinions (87-95% peak accuracy) more effectively than they distinguish true from false factual claims (54-59% for mixed domains), suggesting LLMs encode sentiment/normativity more strongly than factual truth.
+
+3. **Belief encoding shows consistent layer-wise patterns across model scales**: Epistemic truth probing peaks in middle layers (normalized 0.42-0.83), non-epistemic agreement peaks at similar-to-slightly-later layers (0.50-0.67), and type classification peaks consistently at ~0.50-0.67 of total depth.
+
+These findings suggest that LLMs develop distinct representational subspaces for different belief types, potentially reflecting structural differences in how factual claims versus subjective opinions appear in training data. This has implications for hallucination detection and targeted belief interventions.
+
+## 2. Goal
+
+**Hypothesis**: Open-source LLMs (GPT-2 family) encode epistemic and non-epistemic belief types in specific internal layers, and these representations may reflect either deep semantic understanding or surface-level linguistic patterns.
+
+**Motivation**: Inspired by Professor Tan&#39;s inquiry about whether LLMs differentiate epistemic from non-epistemic belief, and the psychological framework of Vesga et al. (2025), we sought to determine whether the distinction between knowledge claims and opinion statements is encoded in LLM internal representations. This is important for:
+
+- **AI Safety**: Understanding what LLMs &#34;know&#34; versus &#34;believe&#34; at the representational level
+- **Hallucination Detection**: If belief types are encoded in specific layers, targeted interventions could improve factual reliability
+- **Interpretability**: Revealing whether LLMs develop genuine semantic understanding of belief categories
+
+**Gap filled**: While prior work has studied truth (Marks &amp; Tegmark 2023), belief states (Zhu et al. 2024), and knowledge (Ju et al. 2024) in LLM representations, no study has systematically probed the distinction between epistemic and non-epistemic beliefs across model layers.
+
+## 3. Data Construction
+
+### Dataset Description
+
+We constructed three dataset categories:
+
+| Dataset | Source | Samples | Labels | Purpose |
+|---------|--------|---------|--------|---------|
+| Epistemic All | Geometry of Truth | 1,000 | True/False | Factual truth probing |
+| Epistemic Cities | Geometry of Truth | 200 | True/False | Geographic facts |
+| Epistemic Common Claims | Geometry of Truth | 200 | True/False | General factual claims |
+| Epistemic Companies | Geometry of Truth | 200 | True/False | Corporate facts |
+| Epistemic Larger Than | Geometry of Truth | 200 | True/False | Numerical comparisons |
+| Epistemic Translations | Geometry of Truth | 200 | True/False | Language facts |
+| Non-Epistemic | Custom-curated | 120 | Commonly-held/Uncommon | Opinion agreement |
+| Type Classification | Combined | 240 | Epistemic/Non-epistemic | Belief type |
+
+### Example Samples
+
+**Epistemic (factual) statements**:
+- True: &#34;The city of Krasnodar is in Russia.&#34; (label=1)
+- False: &#34;The city of Krasnodar is in South Africa.&#34; (label=0)
+
+**Non-epistemic (opinion) statements**:
+- Commonly held: &#34;Most people find sunsets to be beautiful.&#34; (label=1)
+- Uncommon: &#34;Most people prefer cold weather over warm weather.&#34; (label=0)
+
+### Data Quality
+
+- Epistemic dataset: Balanced labels (499 true, 501 false across 5 source domains)
+- Non-epistemic dataset: Perfectly balanced (60 commonly-held, 60 uncommon)
+- Type classification: Perfectly balanced (120 epistemic, 120 non-epistemic)
+- No missing values or duplicates
+
+### Preprocessing
+
+1. Loaded CSV files from Geometry of Truth datasets
+2. Sampled 200 statements per source domain for balanced representation
+3. Curated 120 non-epistemic statements covering aesthetic, ethical, and cultural beliefs
+4. Assigned type labels (epistemic=1, non-epistemic=0) for belief type classification
+5. All statements tokenized by model-specific tokenizers
+
+### Train/Val/Test Splits
+
+- **5-fold stratified cross-validation** used for all probing experiments
+- No separate held-out test set needed due to CV design
+- Stratification ensures label balance in each fold
+
+## 4. Experiment Description
+
+### Methodology
+
+#### High-Level Approach
+
+We extract residual stream activations at every layer of each GPT-2 model for all statements, then train linear probes to test what information is linearly accessible at each layer. We use two complementary probing methods:
+
+1. **Mass-mean probing** (Marks &amp; Tegmark 2023): Classification by projecting onto the difference-of-means direction between classes. No training required; optimization-free and more causally implicated.
+2. **Logistic regression** (liblinear solver): Standard linear probe for validation, applied at sampled layers.
+
+This follows established methodology from Marks &amp; Tegmark (2023), Bortoletto et al. (2024), and Ju et al. (2024).
+
+#### Why This Method?
+
+Mass-mean probing was chosen because:
+- It is optimization-free, avoiding overfitting on small datasets
+- Marks &amp; Tegmark (2023) showed it is the most causally implicated probing direction
+- It is extremely fast, enabling comprehensive layer-wise analysis
+- It provides a conservative baseline that logistic regression can validate
+
+### Implementation Details
+
+#### Tools and Libraries
+
+| Library | Version | Purpose |
+|---------|---------|---------|
+| PyTorch | 2.10.0+cu128 | Model inference |
+| Transformers | 5.2.0 | Model loading |
+| scikit-learn | 1.8.0 | Linear probing |
+| NumPy | 2.4.2 | Array operations |
+| Matplotlib | - | Visualization |
+| Seaborn | - | Heatmaps |
+
+#### Models
+
+| Model | Parameters | Layers | Hidden Dim | HuggingFace ID |
+|-------|-----------|--------|------------|----------------|
+| GPT-2 Small | 117M | 12 | 768 | openai-community/gpt2 |
+| GPT-2 Medium | 345M | 24 | 1024 | openai-community/gpt2-medium |
+| GPT-2 Large | 774M | 36 | 1280 | openai-community/gpt2-large |
+| GPT-2 XL | 1.5B | 48 | 1600 | openai-community/gpt2-xl |
+
+#### Hyperparameters
+
+| Parameter | Value | Selection Method |
+|-----------|-------|------------------|
+| Random seed | 42 | Standard |
+| CV folds | 5 | Standard |
+| Max sequence length | 128 | Sufficient for all statements |
+| Batch size | 64 | GPU memory optimized |
+| Token position | Last token | Standard for decoder-only models |
+| Precision | FP16 | Memory efficiency |
+| SGD alpha (control probe) | 1e-4 | Default |
+| Control permutations | 2 | Time-constrained |
+
+#### Experimental Protocol
+
+1. **Activation extraction** (Phase 2, 137s total):
+   - For each model: tokenize all statements, forward pass with `output_hidden_states=True`
+   - Extract residual stream activations at last non-padding token position
+   - Save per-layer activations as NumPy arrays
+
+2. **Mass-mean probing** (Phase 3, 228s total):
+   - For each layer: compute mean activation per class, derive classification direction
+   - 5-fold cross-validation for unbiased accuracy estimates
+   - Control tasks with randomly permuted labels at sampled layers
+
+3. **Cross-dataset transfer**:
+   - Train mass-mean direction on one epistemic domain, test on another
+   - Evaluates generalization of truth representations across domains
+
+#### Reproducibility
+
+- **Random seeds**: Fixed at 42 for all stochastic operations
+- **Hardware**: 2x NVIDIA GeForce RTX 3090 (24GB each)
+- **Execution time**: ~6 minutes total (137s extraction + 228s probing + analysis)
+- **Python**: 3.12.2
+
+### Raw Results
+
+#### Epistemic Truth Probing (Peak Accuracy by Dataset)
+
+| Model | Cities | Common Claims | Companies | Larger Than | All Combined |
+|-------|--------|--------------|-----------|-------------|-------------|
+| GPT-2 Small | 0.695 (L9) | 0.650 (L9) | 0.615 (L5) | 0.805 (L5) | 0.535 (L5) |
+| GPT-2 Medium | 0.825 (L15) | 0.690 (L21) | 0.605 (L5) | 0.885 (L9) | 0.564 (L11) |
+| GPT-2 Large | 0.835 (L22) | 0.685 (L19) | 0.630 (L16) | 0.865 (L16) | 0.548 (L22) |
+| GPT-2 XL | 0.855 (L22) | 0.675 (L21) | 0.615 (L15) | 0.860 (L3) | 0.590 (L40) |
+
+#### Non-Epistemic and Type Classification (Peak Accuracy)
+
+| Model | Non-Epistemic Agreement | Type Classification | Type Selectivity |
+|-------|------------------------|--------------------|--------------------|
+| GPT-2 Small | 0.867 (L8) | 0.992 (L8) | 0.485 |
+| GPT-2 Medium | 0.908 (L12) | 1.000 (L14) | — |
+| GPT-2 Large | 0.950 (L19) | 1.000 (L21) | — |
+| GPT-2 XL | 0.942 (L26) | 0.996 (L24) | 0.448 |
+
+#### Statistical Tests (Epistemic vs. Non-Epistemic Accuracy Profiles)
+
+| Model | Paired t-test t | p-value | Cohen&#39;s d | Peak Layer Diff |
+|-------|----------------|---------|-----------|-----------------|
+| GPT-2 Small | -18.46 | 1.4e-13 | -4.23 | -0.25 |
+| GPT-2 Medium | -15.16 | 4.6e-12 | -3.48 | -0.04 |
+| GPT-2 Large | -18.31 | 1.6e-13 | -4.20 | +0.08 |
+| GPT-2 XL | -8.55 | 6.2e-08 | -1.96 | +0.29 |
+
+### Visualizations
+
+All visualizations are saved in `results/plots/`:
+
+- `layerwise_gpt2_*.png` — Per-model layer-wise accuracy curves for all three experiment types
+- `cross_model_comparison.png` — Normalized layer comparison across all models
+- `peak_layer_comparison.png` — Bar chart of peak layer positions
+- `selectivity.png` — True accuracy minus random-control accuracy
+- `transfer_accuracy.png` — Cross-dataset transfer results
+- `pca_*_*.png` — PCA visualizations of representations at selected layers
+- `summary_heatmap.png` — Peak accuracy heatmap across models and experiments
+
+## 5. Result Analysis
+
+### Key Findings
+
+#### Finding 1: LLMs strongly distinguish epistemic from non-epistemic statements
+
+Type classification accuracy reaches **99.2-100%** across all GPT-2 sizes (even the smallest 117M model achieves 99.2%). This is far above the random-label control (50.6-50.8%), yielding selectivity scores of 0.45-0.49. This means the internal representations of factual claims and opinion statements occupy clearly distinct regions of activation space.
+
+**Evidence**: All models, all layers from approximately layer 3 onward achieve &gt;90% type classification accuracy. The near-perfect separation suggests this is not a learned skill but an inherent property of how different statement types are processed.
+
+#### Finding 2: Non-epistemic beliefs are more linearly decodable than factual truth
+
+Non-epistemic agreement probing peaks at **86.7-95.0%** accuracy, while epistemic truth probing on the combined dataset peaks at only **53.5-59.0%**. Even the best single-domain epistemic probe (cities: 69.5-85.5%) is generally below non-epistemic probing.
+
+**Interpretation**: This likely reflects that opinion/value statements contain stronger linguistic markers (e.g., &#34;most people believe&#34;, &#34;is considered&#34;) that create clear activation patterns, while truth value is a more abstract property that is harder to decode linearly. This is consistent with Marks &amp; Tegmark&#39;s (2023) observation that truth probes may capture &#34;commonly believed&#34; rather than genuine truth.
+
+#### Finding 3: Epistemic truth probing accuracy increases with model scale
+
+The combined epistemic truth probing accuracy shows a clear scaling trend:
+- GPT-2 Small (117M): 53.5%
+- GPT-2 Medium (345M): 56.4%
+- GPT-2 Large (774M): 54.8%
+- GPT-2 XL (1.5B): 59.0%
+
+Domain-specific epistemic probing shows stronger scaling, with cities reaching 85.5% in GPT-2 XL (up from 69.5% in Small). This suggests larger models develop richer factual representations, consistent with Marks &amp; Tegmark&#39;s finding that truth structure &#34;emerges with scale.&#34;
+
+#### Finding 4: Peak layers show belief-type-dependent patterns
+
+For GPT-2 Small, epistemic truth peaks at normalized layer ~0.42 while non-epistemic peaks at ~0.67 (a difference of 0.25). For GPT-2 XL, epistemic truth peaks later (~0.83) while non-epistemic peaks at ~0.54 (reversed direction, difference of 0.29). This suggests that as models grow larger, factual processing requires more layers while opinion processing stabilizes in middle layers.
+
+### Hypothesis Testing Results
+
+**H1 (Truth linearly decodable)**: Partially supported. Domain-specific probes (cities: up to 85.5%, larger_than: up to 88.5%) exceed 70% but the combined multi-domain probe peaks at only 59.0%. Truth is linearly decodable within specific domains but less so across diverse factual claims.
+
+**H2 (Different layers for different belief types)**: Supported. Paired t-tests yield p &lt; 1e-7 for all models, with large effect sizes (Cohen&#39;s d = -1.96 to -4.23). The accuracy profiles differ significantly between epistemic and non-epistemic probing.
+
+**H3 (Scale-dependent patterns)**: Partially supported. Larger models show higher peak accuracies for both truth and agreement probing, and the peak layer patterns shift with scale.
+
+**H4 (Deep understanding vs. surface patterns)**: Evidence suggests primarily surface-level patterns. The high type classification accuracy (99-100%) may reflect linguistic markers rather than semantic understanding. The lower truth probing accuracy for mixed domains suggests the model encodes &#34;how factual claims sound&#34; more than &#34;what is true.&#34;
+
+### Error Analysis
+
+- **Low truth accuracy for translations** (sp_en_trans): 54.5-58.0% across models, barely above chance. Translation correctness may not be well-represented in GPT-2&#39;s training distribution.
+- **Company facts** consistently achieve lower accuracy (60.5-63.0%) than geographic facts (69.5-85.5%), possibly because geographic facts have stronger co-occurrence statistics in training data.
+- **Non-epistemic probing** could partly reflect surface-level sentiment cues (&#34;most people believe&#34; vs. &#34;most people prefer cold weather&#34;). The high accuracy may overstate semantic understanding.
+
+### Limitations
+
+1. **Non-epistemic dataset is curated, not naturally occurring**: Our 120 opinion statements were manually constructed, which may introduce systematic linguistic patterns that make classification artificially easy. Future work should use naturally occurring opinion statements.
+
+2. **GPT-2 only, no LLaMA**: We were unable to test on LLaMA models (which require HuggingFace authentication). The GPT-2 family provides a useful scaling analysis but may not generalize to more capable architectures.
+
+3. **Mass-mean probing is linear**: We only test linear probing. Non-linear probes might reveal different patterns, though linear probing is more interpretable and standard in the literature.
+
+4. **Small non-epistemic dataset**: 120 samples is small for probing; results may have higher variance. The 5-fold CV helps but cannot fully compensate.
+
+5. **Confound: statement structure**: Epistemic statements are declarative (&#34;The city X is in Y&#34;) while non-epistemic statements use hedging language (&#34;Most people believe...&#34;). The near-perfect type classification may largely reflect these structural differences rather than belief-type understanding.
+
+## 6. Conclusions
+
+### Summary
+
+LLMs in the GPT-2 family maintain **clearly distinct internal representations** for epistemic (factual) and non-epistemic (opinion) statements from approximately the middle layers onward, achieving near-perfect type classification accuracy (99-100%). However, within the epistemic domain, truth value is only moderately linearly decodable (54-86% depending on domain), while non-epistemic agreement is more strongly encoded (87-95%). This suggests LLMs differentiate belief types at a structural level but may rely more on linguistic patterns than deep semantic understanding of truth.
+
+### Implications
+
+**Practical**: The strong type classification results suggest that targeted interventions for hallucination detection could leverage the distinct representational subspaces for factual vs. opinion claims. Identifying which subspace a model is operating in could help flag statements where factual accuracy matters.
+
+**Theoretical**: The finding that non-epistemic beliefs are more linearly decodable than factual truth challenges the assumption that LLMs develop progressively deeper understanding of truth. Instead, they may primarily encode surface-level associations between linguistic patterns and truth values, with opinion/sentiment patterns being more consistently marked in natural language.
+
+### Confidence in Findings
+
+- **High confidence** in type classification results (consistent across all models, strong controls)
+- **Moderate confidence** in epistemic truth probing (consistent with literature but accuracy is modest)
+- **Low-moderate confidence** in non-epistemic probing (limited dataset size, potential surface-level confounds)
+
+## 7. Next Steps
+
+### Immediate Follow-ups
+
+1. **Test on LLaMA models** (LLaMA-3.2-1B, 3B, 8B) to verify cross-architecture generalization
+2. **Use naturally occurring opinion datasets** (e.g., from KaBLE&#39;s belief tasks) to reduce curation bias
+3. **Non-linear probes** (MLP with 1 hidden layer) to test if belief encoding is non-linearly accessible
+
+### Alternative Approaches
+
+- **CCS (Contrast-Consistent Search)**: Unsupervised probing method that might better capture truth representations
+- **Intervention experiments**: Modify activations along the type-classification direction to test causal role
+- **Attention head analysis**: Following Zhu et al. (2024), probe individual attention heads rather than full residual stream
+
+### Broader Extensions
+
+- **Hallucination detection**: Use the epistemic/non-epistemic distinction to build a hallucination detector that flags when models treat opinions as facts
+- **Training dynamics**: Study how belief representations develop during pretraining (using Pythia checkpoints)
+- **Cross-lingual**: Test whether epistemic/non-epistemic distinction holds in non-English languages
+
+### Open Questions
+
+1. Does the near-perfect type classification reflect genuine belief-type understanding or merely surface linguistic patterns?
+2. Would instruction-tuned models show different patterns? (Bortoletto et al. 2024 found dramatic differences for fine-tuned models)
+3. Can the type-classification direction be used to improve factual accuracy through inference-time intervention?
+
+## References
+
+- Alain &amp; Bengio (2016). Understanding Intermediate Layers Using Linear Classifier Probes.
+- Belinkov (2021). Probing Classifiers: Promises, Shortcomings, and Advances.
+- Bortoletto et al. (2024). Brittle Minds, Fixable Activations. Findings of EMNLP 2025.
+- Burns et al. (2022). Discovering Latent Knowledge in Language Models Without Supervision. ICLR 2023.
+- Hewitt &amp; Liang (2019). Designing and Interpreting Probes with Control Tasks.
+- Ju et al. (2024). How Large Language Models Encode Context Knowledge.
+- Marks &amp; Tegmark (2023). The Geometry of Truth. COLM 2024.
+- Meng et al. (2022). Locating and Editing Factual Associations in GPT. NeurIPS 2022.
+- Suzgun et al. (2024). Belief in the Machine: KaBLE Benchmark.
+- Vesga et al. (2025). Psychological Framework for Epistemic vs. Non-Epistemic Beliefs.
+- Zhu et al. (2024). Language Models Represent Beliefs of Self and Others. ICML 2024.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Plan: Layer-wise Probing Analysis of Belief Encoding in LLMs
+
+## Motivation &amp; Novelty Assessment
+
+### Why This Research Matters
+Understanding how LLMs internally represent different types of beliefs is crucial for AI safety, hallucination detection, and building trustworthy AI systems. If epistemic beliefs (evidence-based knowledge claims like &#34;Water boils at 100°C&#34;) and non-epistemic beliefs (opinions, norms, preferences like &#34;Democracy is the best form of government&#34;) are encoded differently across layers, this would reveal whether LLMs develop genuine semantic understanding of belief types or merely capture surface-level linguistic patterns. This distinction has direct implications for hallucination detection: if belief type is encoded in specific layers, targeted interventions could improve factual reliability.
+
+### Gap in Existing Work
+Based on the literature review, three key gaps exist:
+1. **No epistemic vs. non-epistemic distinction**: Prior work (Marks &amp; Tegmark 2023, Zhu et al. 2024, Bortoletto et al. 2024) studies &#34;truth&#34; and &#34;belief&#34; broadly but does not systematically probe the distinction between epistemic beliefs (knowledge claims with evidence) and non-epistemic beliefs (opinions, cultural values).
+2. **Limited cross-architecture comparison**: No study has directly compared belief encoding patterns between GPT-2 and LLaMA in a controlled probing setup using the same datasets and methodology.
+3. **Surface vs. deep understanding**: Marks &amp; Tegmark note their probes may capture &#34;commonly believed&#34; rather than genuine truth understanding; this question remains open.
+
+### Our Novel Contribution
+We conduct the first systematic layer-wise probing study that:
+1. Distinguishes **epistemic** (factual, evidence-based) from **non-epistemic** (opinion, preference, cultural) beliefs
+2. Compares belief encoding across **GPT-2** (117M-1.5B params) and **LLaMA** architectures
+3. Uses **control tasks** (random labels, PCA analysis) to assess whether representations reflect deep understanding or surface patterns
+4. Connects findings to the psychological framework of Vesga et al. (2025) on belief categorization
+
+### Experiment Justification
+- **Experiment 1 (Layer-wise probing on factual truth)**: Establishes baseline — replicates core finding that truth is linearly decodable from internal layers, validates our methodology against Marks &amp; Tegmark.
+- **Experiment 2 (Epistemic vs. non-epistemic probing)**: Tests our core hypothesis — are epistemic and non-epistemic beliefs encoded differently across layers? Uses KaBLE-derived and custom-curated datasets.
+- **Experiment 3 (Cross-architecture comparison)**: Tests whether belief encoding patterns are consistent across GPT-2 and LLaMA, revealing architecture-dependent vs. universal properties.
+- **Experiment 4 (Control analysis)**: Random-label controls and PCA dimensionality analysis to distinguish genuine encoding from probe memorization.
+
+---
+
+## Research Question
+Do open-source LLMs (GPT-2, LLaMA) encode epistemic and non-epistemic belief types in specific internal layers, and do these representations reflect deep semantic understanding or surface-level linguistic patterns?
+
+## Background and Motivation
+Inspired by Professor Tan&#39;s inquiry and the Vesga et al. (2025) psychological framework distinguishing epistemic from non-epistemic beliefs, we investigate whether LLMs internalize this distinction. Prior probing studies have shown that truth (Marks &amp; Tegmark 2023), belief states (Zhu et al. 2024), and knowledge (Ju et al. 2024) are linearly decodable from specific layers, but the epistemic/non-epistemic distinction has not been explored.
+
+## Hypothesis Decomposition
+
+### H1: Truth/belief is linearly decodable from specific layers
+- **Prediction**: Linear probes on middle-to-upper layers will achieve significantly above-chance accuracy for truth classification
+- **Metric**: Probing accuracy &gt; 70% at peak layers; random-label control &lt; 55%
+
+### H2: Epistemic and non-epistemic beliefs are encoded in different layers
+- **Prediction**: Epistemic beliefs (factual knowledge claims) will peak in middle layers (where factual knowledge concentrates), while non-epistemic beliefs (opinions) will peak in later layers (where pragmatic/contextual processing occurs)
+- **Metric**: Statistically significant difference in peak layer index between epistemic and non-epistemic probes (paired t-test, p &lt; 0.05)
+
+### H3: Belief encoding patterns differ between GPT-2 and LLaMA
+- **Prediction**: LLaMA (larger, more capable) will show more differentiated layer-wise patterns than GPT-2
+- **Metric**: Comparison of probing accuracy curves and peak layers across architectures
+
+### H4: Representations reflect more than surface patterns
+- **Prediction**: Control tasks (random labels) will achieve significantly lower accuracy than true-label probes; cross-dataset transfer will maintain above-chance accuracy
+- **Metric**: Selectivity score (true accuracy - control accuracy) &gt; 15 percentage points
+
+## Proposed Methodology
+
+### Approach
+We use **linear probing** (logistic regression) on residual stream activations extracted from every layer of GPT-2 and LLaMA models. This follows the established methodology of Marks &amp; Tegmark (2023) and Bortoletto et al. (2024). Linear probes are preferred because they test what is *linearly accessible* in the representation, providing a conservative estimate of encoded information (Hewitt &amp; Liang 2019).
+
+### Models
+1. **GPT-2 Small** (117M params, 12 layers) — `openai-community/gpt2`
+2. **GPT-2 Medium** (345M params, 24 layers) — `openai-community/gpt2-medium`
+3. **GPT-2 Large** (774M params, 36 layers) — `openai-community/gpt2-large`
+4. **GPT-2 XL** (1.5B params, 48 layers) — `openai-community/gpt2-xl`
+5. **LLaMA-3.2-1B** (1.24B params, 16 layers) — `meta-llama/Llama-3.2-1B`
+6. **LLaMA-3.2-3B** (3.21B params, 28 layers) — `meta-llama/Llama-3.2-3B`
+
+### Datasets
+
+#### Dataset 1: Factual Truth (Geometry of Truth)
+- Source: `datasets/geometry_of_truth/datasets/`
+- Files: `cities.csv`, `sp_en_trans.csv`, `common_claim_true_false.csv`, `companies_true_false.csv`
+- Labels: Binary (true=1, false=0)
+- Use: Establishes baseline truth probing
+
+#### Dataset 2: Epistemic Beliefs (Custom-curated)
+We construct a dataset of epistemic belief statements — claims grounded in evidence/knowledge:
+- Source 1: Geometry of Truth factual datasets (cities, translations, companies)
+- Source 2: KaBLE `direct-fact-verification.jsonl` and `verification-of-first-person-knowledge.jsonl`
+- Source 3: CounterFact true/false pairs
+- Format: Statement + binary label (true/false)
+
+#### Dataset 3: Non-epistemic Beliefs (Custom-curated)
+We construct a dataset of non-epistemic belief statements — opinions, preferences, cultural/moral values:
+- Source: Custom-generated statements covering subjective claims, aesthetic judgments, ethical statements, cultural norms
+- Format: Statement + binary label (commonly-held=1, controversial/opposite=0)
+- This tests whether LLMs encode opinion-type statements differently from factual claims
+
+### Experimental Steps
+
+1. **Data preparation**: Load and preprocess all datasets; create balanced train/test splits (80/20)
+2. **Activation extraction**: For each model, pass statements through and extract residual stream activations at every layer at the last token position
+3. **Linear probing**: Train logistic regression probes on each layer&#39;s activations for each dataset
+4. **Control tasks**: Train probes with randomly permuted labels on same activations
+5. **Cross-dataset transfer**: Train on epistemic, test on non-epistemic (and vice versa)
+6. **PCA visualization**: Visualize layer-wise representations colored by belief type
+7. **Statistical analysis**: Compare peak layers, accuracies, and selectivity scores
+
+### Baselines
+- Random-label probes (Hewitt &amp; Liang 2019) — tests probe memorization
+- Majority-class baseline — lower bound
+- PCA component analysis — tests dimensionality of belief representations
+
+### Evaluation Metrics
+- **Probing accuracy** (primary): Classification accuracy per layer
+- **Selectivity** (Hewitt &amp; Liang 2019): True accuracy minus random-label accuracy
+- **Cross-dataset transfer accuracy**: Generalization test
+- **Peak layer index**: Layer with highest probing accuracy for each belief type
+- **AUC**: Area under ROC curve for probe discrimination
+
+### Statistical Analysis Plan
+- Paired t-tests comparing peak layer indices between epistemic and non-epistemic probes
+- Bootstrap confidence intervals (n=1000) for probing accuracies
+- Bonferroni correction for multiple comparisons across layers
+- Effect size (Cohen&#39;s d) for accuracy differences
+- Significance level: α = 0.05
+
+## Expected Outcomes
+- **H1 supported**: Truth probing accuracy &gt; 70% at peak layers across all models
+- **H2 supported**: Epistemic beliefs peak in middle layers; non-epistemic beliefs show different (later or more distributed) peak patterns
+- **H2 refuted**: Both belief types show same layer-wise profile → suggests LLMs don&#39;t differentiate at the representation level
+- **H3 supported**: LLaMA shows sharper, more differentiated patterns than GPT-2
+- **H4 supported**: High selectivity scores → genuine encoding; low selectivity → surface patterns
+
+## Timeline and Milestones
+1. Environment setup + data prep: 15 min
+2. Activation extraction pipeline: 30 min
+3. GPT-2 experiments (all 4 sizes): 30 min
+4. LLaMA experiments (2 sizes): 30 min
+5. Control tasks + cross-dataset transfer: 20 min
+6. Analysis + visualization: 30 min
+7. Documentation: 25 min
+
+## Potential Challenges
+1. **Memory constraints**: GPT-2 XL and LLaMA-3B may need careful batch sizing → use batch_size=32 for large models
+2. **Dataset construction for non-epistemic beliefs**: No standard dataset exists → curate carefully with clear criteria
+3. **Model download time**: LLaMA models require HuggingFace authentication → fall back to GPT-2 family if blocked
+4. **Probe overfitting**: Small datasets may lead to overfitting → use cross-validation (5-fold)
+
+## Success Criteria
+1. All experiments complete with reproducible results
+2. Clear layer-wise probing accuracy curves for all models and belief types
+3. Statistical tests comparing epistemic vs. non-epistemic encoding
+4. Control tasks validate that probes capture genuine information
+5. Comprehensive REPORT.md with visualizations and statistical analysis
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review: Layer-wise Probing Analysis of Belief Encoding in LLMs
+
+## Research Area Overview
+
+This literature review surveys research on how large language models (LLMs) internally represent beliefs, truth, and knowledge across their layers. The field draws from three converging research threads: (1) probing methodology for neural network interpretability, (2) mechanistic analysis of transformer internal representations, and (3) belief and epistemic reasoning in language models. Together, these threads inform our central research hypothesis: that open-source LLMs such as GPT-2 and Llama encode epistemic and non-epistemic belief types in specific internal layers.
+
+---
+
+## Key Papers
+
+### Core Belief Encoding Papers
+
+#### Zhu et al. (2024) — &#34;Language Models Represent Beliefs of Self and Others&#34;
+- **Venue**: ICML 2024
+- **Key Contribution**: First demonstration that LLMs develop linearly-decodable internal representations encoding belief status of multiple agents (self/oracle vs. others/protagonist)
+- **Methodology**: Linear logistic regression probes on attention head activations at the final token position across all layers and heads of Mistral-7B and DeepSeek-7B
+- **Layer-wise Findings**:
+  - **Oracle (model&#39;s own) belief**: Broadly encoded across layers 13-15 (peak ~97.8% accuracy), excluding initial layers
+  - **Protagonist (other&#39;s) belief**: Concentrated in Layer 10 attention heads (~78% accuracy); most heads show only baseline (~50%) accuracy
+  - **Joint belief**: Concentrated in Layers 12-16 (~79% accuracy)
+- **Datasets**: BigToM, ToMi
+- **Intervention**: +TpFo direction dramatically improves False Belief accuracy (33% → 66% on Mistral-7B)
+- **Code**: https://walter0807.github.io/RepBelief/ (uses nnsight toolkit)
+
+#### Bortoletto et al. (2024) — &#34;Brittle Minds, Fixable Activations&#34;
+- **Venue**: Findings of EMNLP 2025
+- **Key Contribution**: First systematic investigation of belief representations across 12 models (Pythia 70M-12B, Llama-2 7B-70B, base + chat)
+- **Methodology**: Linear probing on residual stream activations at every layer; PCA control tasks; Contrastive Activation Addition (CAA) for intervention
+- **Layer-wise Findings**:
+  - **Oracle beliefs**: Peak accuracy in early layers (layers 1-2), ~95-100% even in smallest models
+  - **Protagonist beliefs**: Peak accuracy at intermediate layers; accuracy increases with model size (logarithmic for base, linear for fine-tuned)
+  - Belief representations occupy a **low-dimensional subspace** (recoverable with k=10 PCA components)
+- **Key Result**: Fine-tuning produces dramatic improvements for protagonist belief encoding (+29% for Llama-2-7B-chat vs. base); protagonist representations are **brittle** to prompt variations while oracle representations are robust
+- **Dataset**: BigToM
+- **Code**: https://git.hcics.simtech.uni-stuttgart.de/public-projects/mental-states-in-LMs
+
+#### Churina et al. (2025) — &#34;Layer of Truth: Probing Belief Shifts under Continual Pre-Training Poisoning&#34;
+- **Key Contribution**: Tracks how internal belief representations shift across layers when LLMs are exposed to misinformation during continued pretraining
+- **Relevance**: Directly studies layer-wise belief probing under adversarial conditions
+
+### Truth and Knowledge Representation
+
+#### Marks &amp; Tegmark (2023) — &#34;The Geometry of Truth&#34;
+- **Venue**: COLM 2024
+- **Key Contribution**: Discovers emergent linear structure in LLM representations of true/false statements; proposes mass-mean probing
+- **Models**: LLaMA-2-7B/13B/70B
+- **Layer-wise Findings**:
+  - Truth representations emerge in **middle layers** (~layer 15 for LLaMA-2-13B)
+  - Three groups of causally implicated hidden states: (a) early layers encode entity identity, (b) middle layers encode truth value, (c) late layers encode prediction
+  - Linear structure **emerges with scale**: 7B shows surface-level clustering; 13B shows clear linear separation; 70B shows unified abstract truth direction
+  - Alignment rotation across layers: antipodal → orthogonal → aligned (cities + neg_cities at layers 6 → 11 → 15)
+- **Datasets**: 15 curated true/false CSV datasets (cities, translations, comparisons, etc.)
+- **Code**: https://github.com/saprmarks/geometry-of-truth
+
+#### Burns et al. (2022) — &#34;Discovering Latent Knowledge in Language Models Without Supervision&#34;
+- **Venue**: ICLR 2023
+- **Key Contribution**: Proposes Contrast-Consistent Search (CCS) for unsupervised discovery of truth representations in LLM activations
+- **Models**: RoBERTa, DeBERTa, GPT-J, T5, UnifiedQA, T0
+- **Layer-wise Findings**:
+  - **Middle layers can outperform final layers** for truth detection (esp. T5 and UnifiedQA encoders)
+  - Under misleading prompts, encoder middle layers remain robust while decoder hidden states degrade
+  - GPT-J peaks around layers 14-20 (~65%)
+- **Datasets**: 10 QA datasets (IMDB, BoolQ, COPA, etc.)
+- **Code**: https://github.com/collin-burns/discovering_latent_knowledge
+
+#### Azaria &amp; Mitchell (2023) — &#34;The Internal State of an LLM Knows When it&#39;s Lying&#34;
+- **Venue**: EMNLP Findings 2023
+- **Key Contribution**: Shows classifiers trained on hidden states can detect when LLMs generate falsehoods; 6 topic-specific true/false datasets
+- **Relevance**: Establishes that internal representations encode truthfulness independently of output
+
+#### Liu et al. (2023) — &#34;Cognitive Dissonance&#34;
+- **Key Contribution**: Examines the gap between LLMs&#39; internal truth representations (probes) and output probabilities; shows models can &#34;know&#34; truth internally while outputting falsehoods
+
+### Layer-wise Knowledge Encoding
+
+#### Ju et al. (2024) — &#34;How Large Language Models Encode Context Knowledge?&#34;
+- **Key Contribution**: First comprehensive layer-wise probing study of context knowledge encoding
+- **Models**: LLaMA-2 7B/13B/70B (base + chat)
+- **Methodology**: V-usable information metric (more discriminative than raw accuracy) with linear probes
+- **Layer-wise Findings**:
+  - **Upper layers encode more context knowledge** (gradual increase from lower to upper layers)
+  - **Knowledge-related entity tokens** encode information earlier (lower layers), while other tokens catch up via self-attention in upper layers
+  - LLaMA-2-70B shows a **decrease in the last few layers** (buffer effect)
+  - Chat models significantly outperform base models at utilizing context knowledge
+- **Code**: https://github.com/Jometeorie/probing_llama
+
+#### Jin et al. (2024) — &#34;Exploring Concept Depth&#34;
+- **Key Contribution**: Proposes &#34;Concept Depth&#34; — more complex concepts are processed at deeper layers
+
+#### Meng et al. (2022) — &#34;Locating and Editing Factual Associations in GPT&#34; (ROME)
+- **Venue**: NeurIPS 2022
+- **Key Contribution**: Uses causal tracing to locate factual knowledge in specific MLP layers of GPT models
+- **Key Finding**: Factual associations are concentrated in middle-layer MLPs; early layers encode subject, middle layers recall facts
+
+### Probing Methodology (Foundational)
+
+#### Alain &amp; Bengio (2016) — &#34;Understanding Intermediate Layers Using Linear Classifier Probes&#34;
+- **Key Contribution**: Proposes using linear classifier probes to monitor features at every layer; establishes that linear separability increases monotonically with depth
+
+#### Conneau et al. (2018) — &#34;Probing Sentence Embeddings for Linguistic Properties&#34;
+- **Key Contribution**: Defines 10 probing tasks for evaluating linguistic properties in sentence embeddings
+
+#### Belinkov (2021) — &#34;Probing Classifiers: Promises, Shortcomings, and Advances&#34;
+- **Key Contribution**: Comprehensive survey of probing methodology; discusses what probes can and cannot reveal
+
+#### Hewitt &amp; Liang (2019) — &#34;Designing and Interpreting Probes with Control Tasks&#34;
+- **Key Contribution**: Proposes control tasks (selectivity) to assess whether probes extract genuine encoded information
+
+#### Voita &amp; Titov (2020) — &#34;Information-Theoretic Probing with MDL&#34;
+- **Key Contribution**: MDL-based probing for more faithful measurement of how well representations encode information
+
+#### Gurnee et al. (2023) — &#34;Finding Neurons in a Haystack&#34;
+- **Key Contribution**: Uses sparse linear probes to identify individual neurons encoding high-level features in LLMs across layers
+
+### Epistemic Reasoning
+
+#### Suzgun et al. (2024) — &#34;Belief in the Machine&#34; (KaBLE)
+- **Key Contribution**: 13,000 questions across 13 epistemic tasks testing LLMs&#39; ability to distinguish knowledge, belief, and fact
+- **Dataset**: KaBLE benchmark (publicly available)
+
+#### Herrmann &amp; Levinstein (2024) — &#34;Standards for Belief Representations in LLMs&#34;
+- **Key Contribution**: Establishes theoretical standards for what counts as genuine belief representation
+
+#### Li et al. (2025) — &#34;Representations of Fact, Fiction and Forecast&#34;
+- **Key Contribution**: Studies how LLMs internally represent facts vs. fiction vs. forecasts
+
+### Mechanistic Interpretability
+
+#### Tenney et al. (2019) — &#34;BERT Rediscovers the Classical NLP Pipeline&#34;
+- **Key Finding**: BERT represents NLP pipeline steps in sequence: POS → parsing → NER → semantic roles → coreference
+
+#### Jawahar et al. (2019) — &#34;What Does BERT Learn about the Structure of Language?&#34;
+- **Key Finding**: Lower layers capture phrase-level syntax, middle layers capture syntactic features, upper layers capture semantic features
+
+#### Li et al. (2023) — &#34;Inference-Time Intervention&#34;
+- **Key Contribution**: Identifies truthfulness-related directions in attention heads; steers LLM activations to improve truthfulness
+- **Code**: https://github.com/likenneth/honest_llama
+
+---
+
+## Common Methodologies
+
+### Probing Approaches
+1. **Linear classifier probes** (logistic regression): Used in Zhu et al., Bortoletto et al., Ju et al., Marks &amp; Tegmark — standard approach for testing linear decodability
+2. **V-usable information**: Used in Ju et al. — more discriminative than raw accuracy, information-theoretic
+3. **Mass-mean probing** (difference-in-means): Proposed by Marks &amp; Tegmark — optimization-free, most causally implicated
+4. **Contrast-Consistent Search (CCS)**: Burns et al. — unsupervised, finds truth direction via consistency constraints
+5. **Sparse probing**: Gurnee et al. — identifies individual neurons responsible for specific features
+
+### Intervention Methods
+1. **Inference-Time Intervention (ITI)**: Li et al. — steers attention head activations
+2. **Contrastive Activation Addition (CAA)**: Bortoletto et al. — adds steering vectors to residual stream
+3. **Causal tracing / activation patching**: Meng et al., Marks &amp; Tegmark — swaps activations to identify causal components
+
+### Representation Extraction
+- **Residual stream activations** at specific token positions (final token, period token, entity tokens)
+- **Attention head activations** (individual heads or grouped by layer)
+- **MLP layer outputs** vs. attention layer outputs
+
+---
+
+## Standard Baselines
+- Zero-shot / few-shot prompting accuracy
+- Random-label control probes (selectivity)
+- PCA dimensionality reduction controls
+- Calibrated few-shot baselines
+- Intervention along random directions (null control)
+
+## Evaluation Metrics
+- **Probing accuracy** (binary/multinomial classification)
+- **V-usable information** (information-theoretic)
+- **Normalized Indirect Effect (NIE)** for causal interventions
+- **Cross-dataset transfer accuracy** for generalization
+- **Cosine similarity** between probe directions across tasks
+
+## Datasets in the Literature
+| Dataset | Used In | Task Type |
+|---------|---------|-----------|
+| BigToM | Zhu et al., Bortoletto et al. | Theory of Mind (true/false belief) |
+| ToMi | Zhu et al. | Theory of Mind |
+| Geometry of Truth CSVs | Marks &amp; Tegmark | True/false factual statements |
+| Azaria True-False | Azaria &amp; Mitchell | Topic-specific true/false |
+| TruthfulQA | Li et al. (ITI) | Truthfulness |
+| ConflictQA | Ju et al. | Parametric vs. contextual knowledge |
+| KaBLE | Suzgun et al. | Epistemic reasoning |
+| LAMA | Petroni et al. | Factual knowledge probing |
+| CounterFact | Meng et al. (ROME) | Factual recall |
+
+---
+
+## Gaps and Opportunities
+
+1. **Limited model coverage**: Most studies focus on LLaMA-2 or single model families. GPT-2 (small, medium, large, XL) has been less studied for belief encoding despite being fully open-source and well-understood architecturally.
+
+2. **Epistemic vs. non-epistemic distinction**: While papers study &#34;truth&#34; and &#34;belief,&#34; the specific distinction between epistemic beliefs (knowledge claims with evidence) and non-epistemic beliefs (opinions, preferences, cultural norms) has not been systematically probed.
+
+3. **Surface-level vs. deep understanding**: Marks &amp; Tegmark note their truth probes may capture &#34;commonly believed&#34; rather than genuine truth understanding. The question of whether LLM belief representations reflect deep semantic understanding or surface-level linguistic patterns remains open.
+
+4. **Cross-architecture comparison**: No study has directly compared belief encoding patterns between GPT-2 (decoder-only, smaller) and LLaMA (decoder-only, larger) in a controlled probing setup.
+
+5. **Training dynamics**: How belief representations develop during training is poorly understood (noted as future work by Zhu et al.).
+
+---
+
+## Recommendations for Our Experiment
+
+### Recommended Models
+- **GPT-2** (small/medium/large/XL): Well-understood architecture, fully open-source, enables scale comparison within one family
+- **LLaMA-2-7B** (base + chat) or **LLaMA-3-8B**: Standard for current probing studies, enables comparison with literature
+- Optionally: **Pythia** family for training data transparency
+
+### Recommended Datasets
+1. **Primary**: Geometry of Truth datasets (true/false statements with ready-to-use probing code for LLaMA)
+2. **Primary**: BigToM (true/false belief conditions, used by core belief papers)
+3. **Secondary**: KaBLE (epistemic reasoning — distinguishes knowledge vs. belief)
+4. **Secondary**: TruthfulQA (standard truthfulness benchmark)
+5. **Validation**: CounterFact-Tracing (factual recall)
+
+### Recommended Methodology
+1. **Linear probing** (logistic regression) on residual stream activations at every layer, following Marks &amp; Tegmark and Bortoletto et al.
+2. **V-usable information** as primary metric (more discriminative than accuracy), following Ju et al.
+3. **Control tasks**: Random label permutation + PCA dimensionality analysis, following Bortoletto et al.
+4. **Token positions**: Final token, entity tokens, and period tokens (all shown to carry different information)
+5. **Activation types**: Compare residual stream, attention head, and MLP outputs
+
+### Recommended Metrics
+- Probing accuracy and V-usable information across layers
+- Cross-dataset transfer accuracy (train on one belief type, test on another)
+- PCA visualization of truth/belief separation per layer
+- Control task selectivity (random labels baseline)
+
+### Methodological Considerations
+- Use mass-mean probing (Marks &amp; Tegmark) alongside logistic regression — it is more causally implicated
+- Include control for &#34;probability&#34; vs. &#34;truth&#34; (the `likely` dataset from Geometry of Truth)
+- Test both base and instruction-tuned models (fine-tuning dramatically affects belief representations per Bortoletto et al.)
+- Consider Bonferroni correction for multiple hypothesis testing across many layers × heads (per Zhu et al.)
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. AUTHOR
+   - Use this exact author line in the \author{} block: Chenxi Peng and Idea-Explorer
+
+3. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+4. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+5. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+6. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+7. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+8. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+9. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+10. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   \author{Chenxi Peng and Idea-Explorer}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Command templates are pre-copied to paper_draft/commands/:
+   - math.tex: Math notation macros
+   - general.tex: Formatting macros
+   - macros.tex: Project-specific term definitions (customize this for your paper)
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read .claude/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.
